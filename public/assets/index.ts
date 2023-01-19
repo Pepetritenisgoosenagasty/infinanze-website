@@ -1,6 +1,7 @@
 export const assetIndex = {
     SVG: {
-        curve: '/assets/images/curve-2.svg', 
+        curve: '/assets/images/curve-2.svg',
+        group: '/assets/svg/group.svg',
     },
     Lottie: {
       
