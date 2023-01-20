@@ -1,6 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import PageTitle from "@/components/PageTitle";
 import { Carousel } from "@mantine/carousel";
-import { Image, SimpleGrid, Text } from "@mantine/core";
+import {
+  Button,
+  Image,
+  List,
+  SimpleGrid,
+  Text,
+  Textarea,
+  TextInput,
+  ThemeIcon,
+} from "@mantine/core";
 import { Raleway } from "@next/font/google";
 import { assetIndex } from "public/assets";
 import { useRef } from "react";
@@ -14,6 +24,12 @@ import { BsArrowRightCircle } from "react-icons/bs";
 import ServicesSection from "@/components/ServicesSection";
 import { solutions } from "@/data/Solutions";
 import { Reviews } from "@/components/Reviews";
+import { FiPhoneMissed } from "react-icons/fi";
+import { MdOutlineMail } from "react-icons/md";
+import { BiTimeFive } from "react-icons/bi";
+import { expertises } from "@/data/expertise";
+import { AccordionContent } from "@/components/AccordionContent";
+import Footer from "@/components/Footer";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -239,24 +255,138 @@ export default function Home() {
           <div className="rounded-lg min-h-[80px] service-card p-5 mt-8"></div>
           <div className="rounded-lg min-h-[500px] service-card my-6 p-20"></div>
         </section>
-        <section className="min-h-[600px] mx-auto px-[100px] flex flex-col text-center py-16 bg-[#F5F5F5]">
-        <div className="px-20">
-        <div>
-            <h1 className="text-[#000] text-[28px] font-bold text-center">
-            Some Sighted Reviews from our Clients
-            </h1>
+        <section className="min-h-[340px] mx-auto px-[100px] flex flex-col text-center pt-16 bg-[#F5F5F5]">
+          <div className="px-20">
+            <div>
+              <h1 className="text-[#000] text-[28px] font-bold text-center">
+                Some Sighted Reviews from our Clients
+              </h1>
+            </div>
+            <div>
+              <p className="font-medium text-[16px] text-[#514F4F] text-center">
+                What our customers say about us matters a lot to us
+              </p>
+            </div>
+            <div className="my-10 ">
+              <Reviews />
+            </div>
           </div>
-          <div>
-            <p className="font-medium text-[16px] text-[#514F4F] text-center">
-            What our customers say about us matters a lot to us
-            </p>
-          </div>
-          <div className="my-10 ">
-            <Reviews />
-          </div>
-        </div>
         </section>
+        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[url('/assets/images/banner.png')] bg-no-repeat bg-cover bg-center flex items-center">
+          {/* <img className="absolute top-0 left-0 right-0 bottom-0 h-[600px] w-full" src="/assets/images/overlay.png" alt="" /> */}
+          <div className="bg-white min-h-[400px] w-full p-10">
+            <SimpleGrid cols={2} spacing="xl">
+              <div>
+                <h5 className="text-[#0959B8] text-[14px]">CONTACT US</h5>
+                <h1 className="text-[#0959B8] text-[30px] my-2 font-bold leading-10">
+                  Speak To Our Expert <br /> Today
+                </h1>
+                <p className="text-[14px]">
+                  We help reach out to your customers by providing digital{" "}
+                  <br /> solutions to your products by offering the following
+                  services
+                </p>
+                <h4 className="text-[#0959B8] text-[14px] font-bold my-6">
+                  Our contact details
+                </h4>
+                <div>
+                  <List spacing="xs" size="sm" center>
+                    <List.Item
+                      icon={
+                        <ThemeIcon bg="#0959B8">
+                          <FiPhoneMissed size={16} />
+                        </ThemeIcon>
+                      }
+                    >
+                      (+49) 15123172822
+                    </List.Item>
+                    <List.Item
+                      icon={
+                        <ThemeIcon bg="#0959B8">
+                          <MdOutlineMail size={16} />
+                        </ThemeIcon>
+                      }
+                    >
+                      support@infinanze.com
+                    </List.Item>
+                    <List.Item
+                      icon={
+                        <ThemeIcon bg="#0959B8">
+                          <BiTimeFive size={16} />
+                        </ThemeIcon>
+                      }
+                    >
+                      Opening Hours: 10:00 - 18:00
+                    </List.Item>
+                  </List>
+                </div>
+              </div>
+              <div>
+                <SimpleGrid cols={2}>
+                  <div>
+                    <TextInput placeholder="Full name" label="" />
+                  </div>
+                  <div>
+                    <TextInput placeholder="Company Name" label="" />
+                  </div>
+                  <div>
+                    <TextInput placeholder="Your work number" label="" />
+                  </div>
+                  <div>
+                    <TextInput placeholder="Your work Email" label="" />
+                  </div>
+                </SimpleGrid>
+                <div className="mt-6">
+                  <Textarea
+                    placeholder="Send Message"
+                    label=""
+                    autosize
+                    minRows={6}
+                  />
+                </div>
+                <div className="text-right mt-6 contact">
+                <Button>Send</Button>
+                </div>
+              </div>
+            </SimpleGrid>
+          </div>
+        </section>
+        <section className="min-h-[950px] mx-auto px-[180px] relative pt-20">
+        <div>
+              <h1 className="text-[#000] text-[28px] font-bold text-center">
+              Our Expertise
+              </h1>
+            </div>
+            <div>
+              <p className="font-medium text-[16px] text-[#514F4F] text-center">
+              We have excelled in different branches of sofware development and other necessary skills that helps us provide <br /> our users with the best solutions and user experience.
+              </p>
+            </div>
+            <div className=" my-16">
+            <SimpleGrid cols={4} spacing="xl" verticalSpacing="xl">
+              {expertises.map((solution, i) => (
+                <>
+                  <div className="bg-[url('/assets/images/expertise.png')] bg-no-repeat bg-cover bg-center w-full h-[180px]  text-white font-[700] text-[20px] flex items-center justify-center break-words px-5">
+                    {solution.name}
+                  </div>
+                </>
+              ))}
+            </SimpleGrid>
+          </div>
+        </section>  
+        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[#F5F5F5] py-10">
+        <div>
+              <h1 className="text-[#000] text-[28px] font-bold text-center">
+              Our Frequently asked Questions
+              </h1>
+            </div>
+            
+            <div className=" my-12">
+            <AccordionContent />
+          </div>
+        </section> 
       </main>
+      <Footer />
     </>
   );
 }

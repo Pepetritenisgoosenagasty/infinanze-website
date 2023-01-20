@@ -23,7 +23,8 @@ export const assetIndex = {
       explore3: '/assets/images/explore-3.png',
       explore4: '/assets/images/explore-4.png',
       explore5: '/assets/images/explore-5.png',
-      explore6: '/assets/images/explore-6.png'
+      explore6: '/assets/images/explore-6.png',
+      logo: '/assets/images/logo.png',
     },
   };
   

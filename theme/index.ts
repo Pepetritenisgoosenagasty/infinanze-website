@@ -81,22 +81,66 @@ export const theme: any = {
       borderRadius: "10px",
     },
 
-    '.my-prefix-p729w7': {
-      width: '13.79px !important',
-height: '13.79px !important',
-background: '#D9D9D9 !important',
+    ".my-prefix-p729w7": {
+      width: "13.79px !important",
+      height: "13.79px !important",
+      background: "#D9D9D9 !important",
     },
 
-    '.my-prefix-Carousel-indicators .my-prefix-Carousel-indicator': {
-      width: '13.79px !important',
+    ".my-prefix-Carousel-indicators .my-prefix-Carousel-indicator": {
+      width: "13.79px !important",
     },
 
-    '.my-prefix-p729w7[data-active]': {
-      background: '#0E7CFF !important',
+    ".my-prefix-p729w7[data-active]": {
+      background: "#0E7CFF !important",
     },
 
-    '.my-prefix-oqtyjo': {
-      left: '50% !important',
-    }
+    ".my-prefix-oqtyjo": {
+      left: "50% !important",
+    },
+
+    ".contact": {
+      button: {
+        background:
+          "linear-gradient(179.08deg, #0E7CFF -2.64%, #4059EC 27.18%, #9320CC 102.93%)",
+        borderRadius: "6px",
+        width: 130,
+        "&:hover": {
+          opacity: 0.8,
+        },
+      },
+    },
+
+    ".my-prefix-v4lv9f": {
+      borderBottom: "0 !important",
+
+      ".my-prefix-Accordion-control": {
+        boxShadow: "0px 20px 50px rgba(0, 0, 0, 0.04)",
+        borderRadius: "10px !important",
+        backgroundColor: "#FFF !important",
+        marginBlock: "15px !important",
+        padding: "25px !important",
+      },
+
+      ".my-prefix-Accordion-content": {
+        boxShadow: "0px 20px 50px rgba(0, 0, 0, 0.04)",
+        borderRadius: "10px !important",
+        backgroundColor: "#FFF !important",
+        padding: "30px !important",
+      },
+    },
+
+    ".nav-btn": {
+      button: {
+        background: "#fff",
+        color: "#052D92",
+        borderRadius: "6px",
+        width: 130,
+        "&:hover": {
+          background: "#052D92",
+          color: "#fff",
+        },
+      },
+    },
   }),
 };
