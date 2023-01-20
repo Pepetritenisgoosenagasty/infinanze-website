@@ -11,6 +11,9 @@ import Header from "@/components/Header";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
 import Ladder from "@/components/Svg/Ladder";
 import { BsArrowRightCircle } from "react-icons/bs";
+import ServicesSection from "@/components/ServicesSection";
+import { solutions } from "@/data/Solutions";
+import { Reviews } from "@/components/Reviews";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -168,7 +171,9 @@ export default function Home() {
               <div>
                 <Ladder />
                 <div className="pt-24 ml-24 text-[#1974FB] flex items-center cursor-pointer">
-                  <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">Find out more</h5>
+                  <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+                    Find out more
+                  </h5>
                   <BsArrowRightCircle />
                 </div>
               </div>
@@ -183,17 +188,73 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="container min-h-[600px] mx-auto  flex flex-col justify-center">
-        <div>
+        <section className="container min-h-[600px] mx-auto  flex flex-col text-center">
+          <div>
             <h1 className="text-[#000] text-[28px] font-bold text-center">
-            Improve and Innovate with the Tech Trends
+              Improve and Innovate with the Tech Trends
             </h1>
           </div>
           <div>
             <p className="font-medium text-[16px] text-[#514F4F] text-center">
-            Our expert are always ready to transform your business with the latest tech <br />  capabilities so as to stand a chance in the IT industry 
+              Our expert are always ready to transform your business with the
+              latest tech <br /> capabilities so as to stand a chance in the IT
+              industry
             </p>
           </div>
+          <div>
+            <ServicesSection />
+          </div>
+        </section>
+        <section className="container min-h-[600px] px-[100px] mx-auto  flex flex-col text-center my-10">
+          <div>
+            <h1 className="text-[#000] text-[28px] font-bold text-center">
+              Solutions We Deliver
+            </h1>
+          </div>
+          <div>
+            <p className="font-medium text-[16px] text-[#514F4F] text-center">
+              Because we are software company, we build the following B2B,B2C{" "}
+              <br /> interaction and internal operation.
+            </p>
+          </div>
+          <div className="rounded-lg min-h-[500px] service-card my-8 border-t-2 border-[#4059EC] p-20">
+            <SimpleGrid cols={3} spacing="xl" verticalSpacing="xl">
+              {solutions.map((solution, i) => (
+                <>
+                  <div className="bg-[url('/assets/images/solution.png')] bg-no-repeat bg-cover bg-center w-full h-[90px] rounded-[8px] text-white font-[700] text-[20px] flex items-center justify-center break-words px-10">
+                    {solution.name}
+                  </div>
+                </>
+              ))}
+            </SimpleGrid>
+          </div>
+        </section>
+        <section className="container min-h-[600px] mx-auto px-[100px]  flex flex-col text-center my-16">
+          <div>
+            <h1 className="text-[#000] text-[28px] font-bold text-center">
+              Technologies and platform we work with
+            </h1>
+          </div>
+
+          <div className="rounded-lg min-h-[80px] service-card p-5 mt-8"></div>
+          <div className="rounded-lg min-h-[500px] service-card my-6 p-20"></div>
+        </section>
+        <section className="min-h-[600px] mx-auto px-[100px] flex flex-col text-center py-16 bg-[#F5F5F5]">
+        <div className="px-20">
+        <div>
+            <h1 className="text-[#000] text-[28px] font-bold text-center">
+            Some Sighted Reviews from our Clients
+            </h1>
+          </div>
+          <div>
+            <p className="font-medium text-[16px] text-[#514F4F] text-center">
+            What our customers say about us matters a lot to us
+            </p>
+          </div>
+          <div className="my-10 ">
+            <Reviews />
+          </div>
+        </div>
         </section>
       </main>
     </>
