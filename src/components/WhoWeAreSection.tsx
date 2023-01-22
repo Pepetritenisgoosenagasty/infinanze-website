@@ -16,7 +16,7 @@ const WhoWeAreSection = () => {
     <div>
       <SimpleGrid cols={3} spacing="lg">
         <div>
-          <Card shadow="sm" p="lg" radius="md" withBorder>
+          <Card shadow="sm" p="lg" radius="md" w="full" withBorder>
             <Card.Section>
               <Image
                 src={assetIndex.Image.explore1}

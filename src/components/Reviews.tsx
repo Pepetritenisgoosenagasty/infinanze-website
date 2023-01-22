@@ -17,7 +17,7 @@ export const Reviews = () => {
     >
       <Carousel.Slide>
         <div className="min-h-[100px] review-card p-10 text-left">
-          <h5 className="font-[700] text-[14px]">Peter Paker</h5>
+          <h5 className="font-[700] text-[14px]">Julies Blake</h5>
           <div className="flex items-center my-1">
             <p className="font-[700] text-[14px]">4.2</p>
             <div className="flex ml-4">
@@ -61,7 +61,7 @@ export const Reviews = () => {
       </Carousel.Slide>
       <Carousel.Slide>
       <div className="min-h-[100px] review-card p-10 text-left">
-          <h5 className="font-[700] text-[14px]">Peter Paker</h5>
+          <h5 className="font-[700] text-[14px]">Edward Snow</h5>
           <div className="flex items-center my-1">
             <p className="font-[700] text-[14px]">4.2</p>
             <div className="flex ml-4">
@@ -83,7 +83,7 @@ export const Reviews = () => {
       </Carousel.Slide>
       <Carousel.Slide>
       <div className="min-h-[100px] review-card p-10 text-left">
-          <h5 className="font-[700] text-[14px]">Peter Paker</h5>
+          <h5 className="font-[700] text-[14px]">Lloyd Jules</h5>
           <div className="flex items-center my-1">
             <p className="font-[700] text-[14px]">4.2</p>
             <div className="flex ml-4">

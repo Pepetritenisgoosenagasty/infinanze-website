@@ -3,6 +3,7 @@ import Link from "next/link";
 import { assetIndex } from "public/assets";
 import React, { useEffect, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
+import BlueLogo from "./Svg/BlueLogo";
 
 const data = [
   {
@@ -49,13 +50,21 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 w-[100%] h-[80px]  z-40 flex items-center justify-between px-16 ${
+      className={`fixed top-0 w-[100%] h-[80px]  z-40 flex items-center justify-between px-[150px] ${
         show ? " bg-white text-[#000] border-b" : " bg-transparent text-[#fff]"
       }`}
     >
       <div>
         <Link href="/">
-         <Image src={assetIndex.Image.logo} alt="logo" width={150}/>
+          {show ? (
+            <BlueLogo />
+          ) : (
+            <Image src={assetIndex.Image.logo} alt="logo" width={150}/>
+
+          )}
+
+
+
         </Link>
       </div>
       <div>

@@ -13,14 +13,14 @@ import {
 } from "@mantine/core";
 import { Raleway } from "@next/font/google";
 import { assetIndex } from "public/assets";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay";
 import { AvatarComponent } from "@/components/AvatarComponent";
 import Header from "@/components/Header";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
 import Ladder from "@/components/Svg/Ladder";
-import { BsArrowRightCircle } from "react-icons/bs";
+import { BsArrowDownRight, BsArrowRightCircle, BsArrowUpLeft } from "react-icons/bs";
 import ServicesSection from "@/components/ServicesSection";
 import { solutions } from "@/data/Solutions";
 import { Reviews } from "@/components/Reviews";
@@ -30,6 +30,8 @@ import { BiTimeFive } from "react-icons/bi";
 import { expertises } from "@/data/expertise";
 import { AccordionContent } from "@/components/AccordionContent";
 import Footer from "@/components/Footer";
+import TechnologiesTab from "@/components/TechnologiesTab";
+import ExpertsCard from "@/components/ExpertsCard";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -80,10 +82,15 @@ export default function Home() {
     </Carousel.Slide>
   ));
 
+
+ 
+
+
+
   return (
     <>
       <PageTitle title="Infinanze | Home" />
-      <main className={`min-h-full ${raleway.className}`}>
+      <main className={`min-h-full   ${raleway.className}`}>
         <section className="w-full max-h-[900px] relative">
           <Header />
           <Carousel
@@ -146,7 +153,7 @@ export default function Home() {
          
         </section> */}
         <section
-          className={`py-20 container mx-auto flex flex-col items-center justify-center ${raleway.className}`}
+          className={`py-20 px-[50px] container mx-auto flex flex-col items-center justify-center ${raleway.className}`}
         >
           <div>
             <h1 className="text-[#000] text-[38px] font-bold text-center">
@@ -166,7 +173,7 @@ export default function Home() {
               Explore Our Services
             </h5>
           </div>
-          <div className="w-full mt-8">
+          <div className="w-full mt-8 mxcontainer">
             <WhoWeAreSection />
           </div>
         </section>
@@ -251,9 +258,7 @@ export default function Home() {
               Technologies and platform we work with
             </h1>
           </div>
-
-          <div className="rounded-lg min-h-[80px] service-card p-5 mt-8"></div>
-          <div className="rounded-lg min-h-[500px] service-card my-6 p-20"></div>
+          <TechnologiesTab />
         </section>
         <section className="min-h-[340px] mx-auto px-[100px] flex flex-col text-center pt-16 bg-[#F5F5F5]">
           <div className="px-20">
@@ -272,9 +277,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[url('/assets/images/banner.png')] bg-no-repeat bg-cover bg-center flex items-center">
+        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
           {/* <img className="absolute top-0 left-0 right-0 bottom-0 h-[600px] w-full" src="/assets/images/overlay.png" alt="" /> */}
-          <div className="bg-white min-h-[400px] w-full p-10">
+          <div className="bg-white min-h-[400px] w-full p-20">
             <SimpleGrid cols={2} spacing="xl">
               <div>
                 <h5 className="text-[#0959B8] text-[14px]">CONTACT US</h5>
@@ -351,7 +356,7 @@ export default function Home() {
             </SimpleGrid>
           </div>
         </section>
-        <section className="min-h-[950px] mx-auto px-[180px] relative pt-20">
+        <section className="min-h-[950px] mx-auto px-[180px] bg-[#F5F5F5] relative pt-20">
         <div>
               <h1 className="text-[#000] text-[28px] font-bold text-center">
               Our Expertise
@@ -366,9 +371,7 @@ export default function Home() {
             <SimpleGrid cols={4} spacing="xl" verticalSpacing="xl">
               {expertises.map((solution, i) => (
                 <>
-                  <div className="bg-[url('/assets/images/expertise.png')] bg-no-repeat bg-cover bg-center w-full h-[180px]  text-white font-[700] text-[20px] flex items-center justify-center break-words px-5">
-                    {solution.name}
-                  </div>
+                  <ExpertsCard name={solution.name} />
                 </>
               ))}
             </SimpleGrid>

@@ -47,6 +47,8 @@ export const theme: any = {
       left: "50px !important",
       right: "50px !important",
       top: "calc(50% - 140px) !important",
+      paddingLeft: "100px !important",
+      paddingRight: "100px !important",
     },
 
     ".my-prefix-2yup0d": {
@@ -142,5 +144,9 @@ export const theme: any = {
         },
       },
     },
+    ".mxcontainer": {
+      maxWidth: '1320px',
+      margin: '0 auto'
+    }
   }),
 };

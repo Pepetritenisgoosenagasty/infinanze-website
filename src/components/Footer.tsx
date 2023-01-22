@@ -15,7 +15,7 @@ import { InputWithButton } from "./EmailForm";
 
 const Footer = () => {
   return (
-    <footer className="min-h-[300px] bg-[#052D92] text-white px-20 py-12">
+    <footer className="min-h-[300px] bg-[#052D92] text-white py-12 px-[150px]">
       <div className="container mx-auto">
         <SimpleGrid cols={4}>
           <div className="mt-12">

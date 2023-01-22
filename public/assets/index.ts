@@ -2,6 +2,10 @@ export const assetIndex = {
     SVG: {
         curve: '/assets/images/curve-2.svg',
         group: '/assets/svg/group.svg',
+        nodejs: '/assets/svg/nodejs.svg',
+        react_native: '/assets/svg/react-native.svg',
+        flutter: '/assets/svg/flutter.svg',
+        banner: '/assets/svg/banner.svg',
     },
     Lottie: {
       
