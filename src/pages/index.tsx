@@ -148,10 +148,6 @@ export default function Home() {
             </svg>
           </div>
         </section>
-        {/* <section className="-mt-[130px]">
-          <Image src={assetIndex.Image.curve} alt="" />
-         
-        </section> */}
         <section
           className={`py-20 px-[50px] container mx-auto flex flex-col items-center justify-center ${raleway.className}`}
         >
