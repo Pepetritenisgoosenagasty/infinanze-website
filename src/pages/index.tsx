@@ -168,12 +168,12 @@ export default function Home() {
               during their digital evolution journey.{" "}
             </p>
           </div>
-          <div className="mt-6">
+          <div className="my-6">
             <h5 className="text-[#000] text-[22px] font-bold text-center">
               Explore Our Services
             </h5>
           </div>
-          <div className="w-full mt-8 mxcontainer">
+          <div className="w-full  mxcontainer">
             <WhoWeAreSection />
           </div>
         </section>

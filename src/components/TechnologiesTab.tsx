@@ -140,6 +140,41 @@ const TechnologiesTab = () => {
               </div>
               </div>
             </Tabs.Panel>
+            <Tabs.Panel value="desktop">
+              <div className='text-left'>
+              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              </div>
+            </Tabs.Panel>
+            <Tabs.Panel value="platform">
+              <div className='text-left'>
+              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              </div>
+            </Tabs.Panel>
+            <Tabs.Panel value="big_data">
+              <div className='text-left'>
+              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              </div>
+            </Tabs.Panel>
+            <Tabs.Panel value="machine_learning">
+              <div className='text-left'>
+              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              </div>
+            </Tabs.Panel>
+            <Tabs.Panel value="devops">
+              <div className='text-left'>
+              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              </div>
+            </Tabs.Panel>
+            <Tabs.Panel value="cloud">
+              <div className='text-left'>
+              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              </div>
+            </Tabs.Panel>
+            <Tabs.Panel value="test">
+              <div className='text-left'>
+              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              </div>
+            </Tabs.Panel>
           </div>
         </StyledTabs>
     </div>
