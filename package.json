@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "deploy": "pm2 deploy production"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -37,3 +38,4 @@
     "tailwindcss": "^3.2.4"
   }
 }
+
