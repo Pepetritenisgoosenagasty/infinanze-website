@@ -1,6 +1,7 @@
 import { Card, SimpleGrid, Tabs, TabsProps } from "@mantine/core";
 import React from "react";
 import { BsArrowRight, BsArrowRightCircle } from "react-icons/bs";
+import Check from "./Svg/Check";
 
 function StyledTabs(props: TabsProps) {
   return (
@@ -134,45 +135,203 @@ const ServicesSection = () => {
               collection, storage, <br /> processing and analysis
             </p>
             <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
-              <div>
-                <h4 className="text-[16px] font-[500]">
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
                   Consulting and implemetation
                 </h4>
               </div>
-              <div>
-                <h4 className="text-[16px] font-[500]">
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
                   Support and Evolution
                 </h4>
               </div>
-              <div>
-                <h4 className="text-[16px] font-[500]">Data security</h4>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">Data security</h4>
               </div>
-              <div>
-                <h4 className="text-[16px] font-[500]">Data governance</h4>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">Data governance</h4>
               </div>
-              
             </SimpleGrid>
             <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
-                  <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
-                    Find out more
-                  </h5>
-                  <BsArrowRightCircle />
-                </div>
+              <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+                Find out more
+              </h5>
+              <BsArrowRightCircle />
+            </div>
           </Tabs.Panel>
           <Tabs.Panel value="artificial_intelligent">
-            <h5 className="text-[20px] font-bold">Not Available</h5>
+            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <p className="my-8 text-sm">
+              With AI and ML technologies that simulate human intelligence,
+              decision-making, <br /> planning, and forecasting can be improved,
+              and corporate processes can be overhauled.
+            </p>
+            <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">Robotics</h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Image recognition
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Machine learning
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Natural language processing{" "}
+                </h4>
+              </div>
+            </SimpleGrid>
+            <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
+              <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+                Find out more
+              </h5>
+              <BsArrowRightCircle />
+            </div>
           </Tabs.Panel>
           <Tabs.Panel value="computer_vision">
-          <h5 className="text-[20px] font-bold">Not Available</h5>
+            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <p className="my-8 text-sm font-normal">
+              Obtain useful information from photos and videos.
+            </p>
+            <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  3D modelling and mapping
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Barcode verification and validation.
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Recognition of item location and positioning
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Detection of visual defects and anomalies
+                </h4>
+              </div>
+            </SimpleGrid>
+            <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
+              <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+                Find out more
+              </h5>
+              <BsArrowRightCircle />
+            </div>
           </Tabs.Panel>
           <Tabs.Panel value="Internet_things">
-          <h5 className="text-[20px] font-bold">Not Available</h5>
+          <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <p className="my-8 text-sm">
+            Create &quote;smart&quote; operations by gathering, storing, and analyzing sensor data.
+            </p>
+            <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                IOT solution development
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                IoT Analytics
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                IoT Consulting
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                IoT Evolution
+                </h4>
+              </div>
+            </SimpleGrid>
+            <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
+              <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+                Find out more
+              </h5>
+              <BsArrowRightCircle />
+            </div>
           </Tabs.Panel>
           <Tabs.Panel value="blockchain">
-          <h5 className="text-[20px] font-bold">Not Available</h5>
+            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <p className="my-8 text-sm">
+              Find products that will improve transaction security,
+              traceability, and processing speed.
+            </p>
+            <SimpleGrid cols={1} spacing="xl" verticalSpacing="xl">
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Blockchain-based product development for product companies
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Blockchain consulting and implementation for non-IT
+                  enterprises
+                </h4>
+              </div>
+            </SimpleGrid>
+            <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
+              <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+                Find out more
+              </h5>
+              <BsArrowRightCircle />
+            </div>
           </Tabs.Panel>
           <Tabs.Panel value="mixed_reality">
-          <h5 className="text-[20px] font-bold">Not Available</h5>
+            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <p className="my-8 text-sm">
+              To make routine jobs and activities easier, safer, and more
+              entertaining, blur the <br /> boundaries between the real world
+              and the digital world.
+            </p>
+            <SimpleGrid cols={1} spacing="xl" verticalSpacing="xl">
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Virtual reality development
+                </h4>
+              </div>
+              <div className="flex items-center">
+                <Check />
+                <h4 className="text-[16px] font-[500] ml-2">
+                  Argumented reality development
+                </h4>
+              </div>
+            </SimpleGrid>
+            <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
+              <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+                Find out more
+              </h5>
+              <BsArrowRightCircle />
+            </div>
           </Tabs.Panel>
         </div>
       </div>

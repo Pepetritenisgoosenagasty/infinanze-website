@@ -1,5 +1,6 @@
 import { Button, Image, Text } from "@mantine/core";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { assetIndex } from "public/assets";
 import React, { useEffect, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
@@ -9,6 +10,7 @@ const data = [
   {
     name: "HOME",
     hasArrow: false,
+    path: '/'
   },
   {
     name: "SERVICES",
@@ -17,6 +19,7 @@ const data = [
   {
     name: "ABOUT",
     hasArrow: false,
+    path: "/about",
   },
   {
     name: "TECHNOLOGIES",
@@ -30,6 +33,8 @@ const data = [
 
 const Header = () => {
   const [show, setShow] = useState(false);
+
+  const router = useRouter()
 
   // Header Animation
   useEffect(() => {
@@ -48,9 +53,14 @@ const Header = () => {
     };
   }, []);
 
+
+  const handleClick = () => {
+    console.log('Clicked')
+  }
+
   return (
     <div
-      className={`fixed top-0 w-[100%] h-[80px]  z-40 flex items-center justify-between px-[150px] ${
+      className={`fixed top-0 w-[100%] h-[80px]  z-40 flex items-center justify-between px-[120px] ${
         show ? " bg-white text-[#000] border-b" : " bg-transparent text-[#fff]"
       }`}
     >
@@ -59,22 +69,19 @@ const Header = () => {
           {show ? (
             <BlueLogo />
           ) : (
-            <Image src={assetIndex.Image.logo} alt="logo" width={150}/>
-
+            <Image src={assetIndex.Image.logo} alt="logo" width={150} />
           )}
-
-
-
         </Link>
       </div>
       <div>
-        <ul className="flex items-center space-x-6">
+        <ul className="flex items-center space-x-6 z-40">
           {data.map((item, index) => (
             <React.Fragment key={index}>
               <li
                 className={`text-[14px] cursor-pointer font-bold ${
                   item.hasArrow && "flex items-center"
                 }`}
+                onClick={item.path ? () => router.push(item.path) : handleClick}
               >
                 {item.name}{" "}
                 {item.hasArrow && (
@@ -87,8 +94,8 @@ const Header = () => {
           ))}
         </ul>
       </div>
-      <div className={`${show ? 'contact' : 'nav-btn'}`}>
-      <Button>Let`s Talk</Button>
+      <div className={`${show ? "contact" : "nav-btn"}`}>
+        <Button>Let`s Talk</Button>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ export const solutions: SolutionsTypes[] = [
     },
     {
         id: 3,
-        name: 'Fleet management softwar',
+        name: 'Fleet management software',
     },
     {
         id: 4,

@@ -107,7 +107,7 @@ const TechnologiesTab = () => {
           <div className="rounded-lg min-h-[500px] service-card my-6 px-20 py-20">
           <Tabs.Panel value="web">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Front End</h1>
+              <h5 className='font-bold text-[16px]'>Front End</h5>
 
               <div className='my-6'>
                 <Group spacing="xl">
@@ -119,7 +119,7 @@ const TechnologiesTab = () => {
               </div>
               </div>
               <div className='text-left mt-12'>
-              <h1 className='font-bold text-[20px]'>Backend End</h1>
+              <h5 className='font-bold text-[16px]'>Backend End</h5>
 
               <div className='my-6'>
                 <Group spacing="xl">
@@ -142,37 +142,144 @@ const TechnologiesTab = () => {
             </Tabs.Panel>
             <Tabs.Panel value="desktop">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              <Group spacing="xl">
+                 <Image src={assetIndex.SVG.python} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.cplus} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.Image.electron} alt=''width={100} height={100}/>
+                </Group>
               </div>
             </Tabs.Panel>
             <Tabs.Panel value="platform">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              {/* <h1 className='font-bold text-[20px]'>Platforms we work with</h1> */}
+              <div className='text-left'>
+              <Group spacing="xl">
+                 <Image src={assetIndex.SVG.adobe_commercean} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.salesforce} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.sap} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.powerBi} alt=''width={100} height={100}/>
+                </Group>
+              </div>
               </div>
             </Tabs.Panel>
             <Tabs.Panel value="big_data">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              <Group spacing="xl">
+                 <Image src={assetIndex.SVG.mongoDB} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.amazonDB} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.amazonShift} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.amazonDynamo} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.azureBlob} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.azureCosmos} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.azureData} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.apacheBase} alt=''width={100} height={100}/>
+                </Group>
               </div>
             </Tabs.Panel>
             <Tabs.Panel value="machine_learning">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Not Available</h1>
+             
+              <div className='text-left'>
+              <h5 className='font-bold text-[16px]'>Programming Languages</h5>
+
+              <div className='my-6'>
+                <Group spacing="xl">
+                <Image src={assetIndex.SVG.octave} alt=''width={100} height={100}/>
+                <Image src={assetIndex.SVG.r} alt=''width={100} height={100}/>
+                </Group>
+              </div>
+              </div>
+              <div className='text-left mt-12'>
+              <h5 className='font-bold text-[16px]'>Frameworks</h5>
+
+              <div className='my-6'>
+                <Group spacing="xl">
+                 <Image src={assetIndex.SVG.opencv} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.tensorFlow} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.touch} alt=''width={100} height={100}/>
+                </Group>
+              </div>
+              </div>
+              <div className='text-left mt-12'>
+              <h5 className='font-bold text-[16px]'>Libraries</h5>
+
+              <div className='my-6'>
+                <Group spacing="xl">
+                 <Image src={assetIndex.SVG.sci} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.spacy} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.spark} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.gensim} alt=''width={100} height={100}/>
+                </Group>
+              </div>
+              </div>
+             
               </div>
             </Tabs.Panel>
             <Tabs.Panel value="devops">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              <div className='text-left '>
+              <h5 className='font-bold text-[16px]'>Containerization</h5>
+              <div className='my-6'>
+                <Group spacing="xl">
+                 <Image src={assetIndex.SVG.k8} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.docker} alt=''width={100} height={100}/>
+                </Group>
+              </div>
+              </div>
+
+              <div className='text-left mt-12'>
+              <h5 className='font-bold text-[16px]'>Automation</h5>
+              <div className='my-6'>
+                <Group spacing="xl">
+                 <Image src={assetIndex.SVG.terraform} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.anisble} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.packer} alt=''width={100} height={100}/>
+             
+                </Group>
+              </div>
+              </div>
+              
+              <div className='text-left mt-12'>
+              <h5 className='font-bold text-[16px]'>CI/CD Tools</h5>
+              <div className='my-6'>
+                <Group spacing="xl">
+                 <Image src={assetIndex.SVG.jenkins} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.gitlab} alt=''width={100} height={100}/>
+                </Group>
+              </div>
+              </div>
+
+              <div className='text-left mt-12'>
+              <h5 className='font-bold text-[16px]'>Monitoring</h5>
+              <div className='my-6'>
+                <Group spacing="xl">
+                 <Image src={assetIndex.SVG.grafana} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.prometheous} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.datadog} alt=''width={100} height={100}/>
+                </Group>
+              </div>
+              </div>
               </div>
             </Tabs.Panel>
             <Tabs.Panel value="cloud">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              <Group spacing="xl">
+                 <Image src={assetIndex.SVG.digitalOcean} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.goggle} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.aws} alt=''width={100} height={100}/>
+                </Group>
               </div>
             </Tabs.Panel>
             <Tabs.Panel value="test">
               <div className='text-left'>
-              <h1 className='font-bold text-[20px]'>Not Available</h1>
+              <Group spacing="xl">
+                 <Image src={assetIndex.SVG.appium} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.selenium} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.fmbt} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.xct} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.postman} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.vs} alt=''width={100} height={100}/>
+                </Group>
               </div>
             </Tabs.Panel>
           </div>

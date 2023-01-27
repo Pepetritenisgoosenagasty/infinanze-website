@@ -4,9 +4,12 @@ import {
   Group,
   List,
   SimpleGrid,
+  Text,
   TextInput,
   ThemeIcon,
 } from "@mantine/core";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { BiEnvelope, BiMap, BiTimeFive } from "react-icons/bi";
 import { BsFacebook, BsInstagram, BsTelephoneX } from "react-icons/bs";
@@ -14,6 +17,7 @@ import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { InputWithButton } from "./EmailForm";
 
 const Footer = () => {
+  const router = useRouter()
   return (
     <footer className="min-h-[300px] bg-[#052D92] text-white py-12 px-[150px]">
       <div className="container mx-auto">
@@ -58,19 +62,26 @@ const Footer = () => {
             <h1 className="text-[18px] font-[600]">Quick Links</h1>
             <ul className="text-sm space-y-4 mt-6">
               <li>
-                <a href="">Home</a>
+              <Link href="/">
+                <Text>Home</Text>
+                </Link>
               </li>
               <li>
-                <a href="">About</a>
+              <Link href="/about">
+                <Text>About</Text>
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="">Services</a>
               </li>
               <li>
                 <a href="">FAQ</a>
-              </li>
+              </li> */}
               <li>
-                <a href="">Contact</a>
+                {/* <a href="#" onClick={() => router.push('/contact')}>Contact</a> */}
+                <Link href="/contact">
+                <Text>Contact</Text>
+                </Link>
               </li>
             </ul>
           </div>

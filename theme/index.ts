@@ -147,6 +147,30 @@ export const theme: any = {
     ".mxcontainer": {
       maxWidth: '1320px',
       margin: '0 auto'
+    },
+
+    ".choice-card": {
+      boxShadow: '0px 4px 32px rgba(0, 0, 0, 0.1)',
+      background: "#fff",
+      
+    },
+
+    '.about': {
+      '.my-prefix-16tukyl': {
+        border: '0px !important',
+        boxShadow: '0px 4px 34px rgba(0, 0, 0, 0.08)',
+        fontSize: "16px !important",
+      },
+      '.my-prefix-1c4piau': {
+        right: '60px !important',
+
+        'button': {
+          background: '#1974FB !important'
+        }
+      }
+    },
+    '.contact-left': {
+      background: 'linear-gradient(179.08deg, #0E7CFF -2.64%, #4059EC 64.81%, #9320CC 119.93%)'
     }
   }),
 };

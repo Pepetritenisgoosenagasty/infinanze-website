@@ -32,6 +32,8 @@ import { AccordionContent } from "@/components/AccordionContent";
 import Footer from "@/components/Footer";
 import TechnologiesTab from "@/components/TechnologiesTab";
 import ExpertsCard from "@/components/ExpertsCard";
+import GradientBg from "@/components/Svg/GradientBg";
+import ExpertSection from "@/components/ExpertSection";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -90,7 +92,7 @@ export default function Home() {
   return (
     <>
       <PageTitle title="Infinanze | Home" />
-      <main className={`min-h-full   ${raleway.className}`}>
+      <main className={`min-h-full ${raleway.className}`}>
         <section className="w-full max-h-[900px] relative">
           <Header />
           <Carousel
@@ -109,43 +111,7 @@ export default function Home() {
           </div>
           {/* <div className="absolute bottom-0 top-0 left-0 right-0 h-full w-screen bg-[#03123680]"></div> */}
           <div className="absolute -bottom-10 w-full">
-            <svg
-              className="w-full"
-              viewBox="0 0 1512 224"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 54C394.874 195.652 721.426 198.908 1512 54V224H0V54Z"
-                fill="white"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M0 13V55.2016C403.834 241.915 662.159 196.279 943.123 146.643C1112.3 116.755 1289.69 85.4172 1512 102.484V63.5C1289.69 45.2719 1112.3 78.7425 943.123 110.664C662.159 163.678 403.834 212.42 0 13Z"
-                fill="url(#paint0_linear_1379_1197)"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M943.123 97.6644C1112.3 65.7425 1289.69 32.2719 1512 50.5V65C1511 64.9443 1510 64.8895 1509 64.8354V64C1286.69 45.7719 1109.3 79.2425 940.123 111.164C659.856 164.047 402.114 212.679 0 14.9782V0C403.834 199.42 662.159 150.678 943.123 97.6644Z"
-                fill="white"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_1379_1197"
-                  x1="631.744"
-                  y1="-62.9725"
-                  x2="632.289"
-                  y2="227.982"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0.240716" stop-color="#0E7CFF" />
-                  <stop offset="0.425446" stop-color="#4059EC" />
-                  <stop offset="0.894675" stop-color="#9320CC" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <GradientBg />
           </div>
         </section>
         <section
@@ -274,83 +240,7 @@ export default function Home() {
           </div>
         </section>
         <section className="min-h-[600px] mx-auto px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
-          {/* <img className="absolute top-0 left-0 right-0 bottom-0 h-[600px] w-full" src="/assets/images/overlay.png" alt="" /> */}
-          <div className="bg-white min-h-[400px] w-full p-20">
-            <SimpleGrid cols={2} spacing="xl">
-              <div>
-                <h5 className="text-[#0959B8] text-[14px]">CONTACT US</h5>
-                <h1 className="text-[#0959B8] text-[30px] my-2 font-bold leading-10">
-                  Speak To Our Expert <br /> Today
-                </h1>
-                <p className="text-[14px]">
-                  We help reach out to your customers by providing digital{" "}
-                  <br /> solutions to your products by offering the following
-                  services
-                </p>
-                <h4 className="text-[#0959B8] text-[14px] font-bold my-6">
-                  Our contact details
-                </h4>
-                <div>
-                  <List spacing="xs" size="sm" center>
-                    <List.Item
-                      icon={
-                        <ThemeIcon bg="#0959B8">
-                          <FiPhoneMissed size={16} />
-                        </ThemeIcon>
-                      }
-                    >
-                      (+49) 15123172822
-                    </List.Item>
-                    <List.Item
-                      icon={
-                        <ThemeIcon bg="#0959B8">
-                          <MdOutlineMail size={16} />
-                        </ThemeIcon>
-                      }
-                    >
-                      support@infinanze.com
-                    </List.Item>
-                    <List.Item
-                      icon={
-                        <ThemeIcon bg="#0959B8">
-                          <BiTimeFive size={16} />
-                        </ThemeIcon>
-                      }
-                    >
-                      Opening Hours: 10:00 - 18:00
-                    </List.Item>
-                  </List>
-                </div>
-              </div>
-              <div>
-                <SimpleGrid cols={2}>
-                  <div>
-                    <TextInput placeholder="Full name" label="" />
-                  </div>
-                  <div>
-                    <TextInput placeholder="Company Name" label="" />
-                  </div>
-                  <div>
-                    <TextInput placeholder="Your work number" label="" />
-                  </div>
-                  <div>
-                    <TextInput placeholder="Your work Email" label="" />
-                  </div>
-                </SimpleGrid>
-                <div className="mt-6">
-                  <Textarea
-                    placeholder="Send Message"
-                    label=""
-                    autosize
-                    minRows={6}
-                  />
-                </div>
-                <div className="text-right mt-6 contact">
-                <Button>Send</Button>
-                </div>
-              </div>
-            </SimpleGrid>
-          </div>
+         <ExpertSection />
         </section>
         <section className="min-h-[950px] mx-auto px-[180px] bg-[#F5F5F5] relative pt-20">
         <div>
