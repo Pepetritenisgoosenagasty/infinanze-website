@@ -80,6 +80,7 @@ export const assetIndex = {
       aboutUser: '/assets/images/about-user.png',
       value: '/assets/images/values.png',
       electron: '/assets/images/electron.png',
+      laptop: '/assets/images/laptop.png',
     },
   };
   
