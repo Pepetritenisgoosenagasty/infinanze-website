@@ -65,6 +65,7 @@ export const assetIndex = {
       banner1: '/assets/images/banner-1.png',
       banner2: '/assets/images/banner-2.png',
       banner3: '/assets/images/banner-3.png',
+      banner4: '/assets/images/banner-4.png',
       curve: '/assets/images/curve.png',
       avatar1: '/assets/images/avatar-1.png',
       avatar2: '/assets/images/avatar-2.png',
@@ -81,6 +82,10 @@ export const assetIndex = {
       value: '/assets/images/values.png',
       electron: '/assets/images/electron.png',
       laptop: '/assets/images/laptop.png',
+      ux: '/assets/images/ux.png',
+      pattern: '/assets/images/pattern.png',
+      pattern2: '/assets/images/pattern2.png',
+      pattern3: '/assets/images/pattern3.png',
     },
   };
   

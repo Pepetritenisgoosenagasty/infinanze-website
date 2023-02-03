@@ -10,6 +10,7 @@ import { MdSettingsApplications } from "react-icons/md";
 import { FaAmazon, FaDatabase, FaJava, FaLaptopCode, FaMicrosoft, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import {SiAdobe, SiCplusplus, SiMicrosoftexcel} from "react-icons/si"
 import { DiJavascript1 } from "react-icons/di"
+import ListComponent from "./ListComponent";
 
 const data = [
   {
@@ -144,62 +145,7 @@ const Header = () => {
       </Grid.Col>
       <Grid.Col span={8} >
         <div className="py-8 ml-4">
-        <h1 className="text-lg font-bold">SOFTWARE TOOLS</h1>
-
-        <div className="mt-6">
-              <List spacing="sm" size="sm" c="black" center>
-                <List.Item
-                sx={{cursor: "pointer"}}
-                  icon={
-                    <ThemeIcon bg="#fff" c="dark">
-                      <MdSettingsApplications size={20} />
-                    </ThemeIcon>
-                  }
-                >
-                  Softwarre Development 
-                </List.Item>
-                <List.Item
-                sx={{cursor: "pointer"}}
-                  icon={
-                    <ThemeIcon bg="#fff" c="dark">
-                      <BsLaptop size={20} />
-                    </ThemeIcon>
-                  }
-                >
-                  IT Consulting
-                </List.Item>
-                <List.Item
-                sx={{cursor: "pointer"}}
-                  icon={
-                    <ThemeIcon bg="#fff" c="dark">
-                      <FaLaptopCode size={20} />
-                    </ThemeIcon>
-                  }
-                >
-                  Web Development
-                </List.Item>
-                <List.Item
-                sx={{cursor: "pointer"}}
-                  icon={
-                    <ThemeIcon bg="#fff" c="dark">
-                      <BsUiRadiosGrid size={20} />
-                    </ThemeIcon>
-                  }
-                >
-                  IOS Development
-                </List.Item>
-                <List.Item
-                sx={{cursor: "pointer"}}
-                  icon={
-                    <ThemeIcon bg="#fff" c="dark">
-                      <BsUiRadios size={20} />
-                    </ThemeIcon>
-                  }
-                >
-                  UI/UX Design
-                </List.Item>
-              </List>
-            </div>
+          <ListComponent />      
         </div>
       </Grid.Col>
     </Grid>
@@ -279,62 +225,7 @@ const Header = () => {
     </div>
       </Grid.Col>
       <Grid.Col span={4}>
-      <h1 className="text-lg font-bold">SOFTWARE TOOLS</h1>
-
-<div className="mt-6">
-      <List spacing="sm" size="sm" c="black" center>
-        <List.Item
-        sx={{cursor: "pointer"}}
-          icon={
-            <ThemeIcon bg="#fff" c="dark">
-              <MdSettingsApplications size={20} />
-            </ThemeIcon>
-          }
-        >
-          Softwarre Development 
-        </List.Item>
-        <List.Item
-        sx={{cursor: "pointer"}}
-          icon={
-            <ThemeIcon bg="#fff" c="dark">
-              <BsLaptop size={20} />
-            </ThemeIcon>
-          }
-        >
-          IT Consulting
-        </List.Item>
-        <List.Item
-        sx={{cursor: "pointer"}}
-          icon={
-            <ThemeIcon bg="#fff" c="dark">
-              <FaLaptopCode size={20} />
-            </ThemeIcon>
-          }
-        >
-          Web Development
-        </List.Item>
-        <List.Item
-        sx={{cursor: "pointer"}}
-          icon={
-            <ThemeIcon bg="#fff" c="dark">
-              <BsUiRadiosGrid size={20} />
-            </ThemeIcon>
-          }
-        >
-          IOS Development
-        </List.Item>
-        <List.Item
-        sx={{cursor: "pointer"}}
-          icon={
-            <ThemeIcon bg="#fff" c="dark">
-              <BsUiRadios size={20} />
-            </ThemeIcon>
-          }
-        >
-          UI/UX Design
-        </List.Item>
-      </List>
-    </div>
+      <ListComponent />  
       </Grid.Col>
       <Grid.Col span={4}>
       <h1 className="text-lg font-bold">PLATFORMS</h1>

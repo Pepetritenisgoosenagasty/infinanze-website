@@ -93,7 +93,7 @@ export default function Home() {
     <>
       <PageTitle title="Infinanze | Home" />
       <main className={`min-h-full ${raleway.className}`}>
-        <section className="w-full max-h-[900px] relative">
+        <section className="w-full max-h-[900px] relative home">
           <Header />
           <Carousel
             sx={{ width: "100%", height: 900 }}

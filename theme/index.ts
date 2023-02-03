@@ -33,31 +33,51 @@ export const theme: any = {
       },
     },
 
-    ".my-prefix-Image-image": {
-      // height: '600px !important',
-      // objectFit: 'fill !important',
-      backgroundSize: "cover !important",
-      backgroundRepeat: "no-repeat !important",
-      backgroundPosition: "center !important",
+    '.home': {
+      ".my-prefix-Image-image": {
+        // height: '600px !important',
+        // objectFit: 'fill !important',
+        backgroundSize: "cover !important",
+        backgroundRepeat: "no-repeat !important",
+        backgroundPosition: "center !important",
+      },
+  
+      ".my-prefix-4ny9bc": {
+        position: "absolute",
+        Zindex: 1,
+        left: "50px !important",
+        right: "50px !important",
+        top: "calc(50% - 140px) !important",
+        paddingLeft: "100px !important",
+        paddingRight: "100px !important",
+      },
+  
+      ".my-prefix-2yup0d": {
+        border: "none !important",
+        minWidth: "40px !important",
+        minHeight: "100px !important",
+        borderRadius: "0 !important",
+        color: "#fff !important",
+        backgroundColor: "#D9D9D91A !important",
+      },
     },
 
-    ".my-prefix-4ny9bc": {
-      position: "absolute",
-      Zindex: 1,
-      left: "50px !important",
-      right: "50px !important",
-      top: "calc(50% - 140px) !important",
-      paddingLeft: "100px !important",
-      paddingRight: "100px !important",
-    },
+    '.process': {
+      ".my-prefix-4ny9bc": {
+        left: '-100px !important',
+        right: '-100px !important',
+        top: 'calc(61% - 13px) !important',
+      },
+      ".my-prefix-1vplgrr": {
+        background: 'transparent !important',
+        border: 'none !important',
 
-    ".my-prefix-2yup0d": {
-      border: "none !important",
-      minWidth: "40px !important",
-      minHeight: "100px !important",
-      borderRadius: "0 !important",
-      color: "#fff !important",
-      backgroundColor: "#D9D9D91A !important",
+        'svg': {
+          color: 'white !important',
+          width: '40px !important',
+          height: '40px !important'
+        }
+      }
     },
 
     ".students": {
@@ -75,6 +95,11 @@ export const theme: any = {
 
     ".service-card": {
       boxShadow: "0px 4px 32px rgba(0, 0, 0, 0.1)",
+    },
+    
+    ".consult-card": {
+      boxShadow: '0px 4px 34px rgba(0, 0, 0, 0.08)',
+      borderRadius: '5px'
     },
 
     ".review-card": {
@@ -134,7 +159,7 @@ export const theme: any = {
 
     ".nav-btn": {
       button: {
-        background: "#fff",
+        background: "#F4ECEC",
         color: "#052D92",
         borderRadius: "6px",
         width: 130,
@@ -171,6 +196,10 @@ export const theme: any = {
     },
     '.contact-left': {
       background: 'linear-gradient(179.08deg, #0E7CFF -2.64%, #4059EC 64.81%, #9320CC 119.93%)'
+    },
+    '.ux-card': {
+      boxShadow: '0px 4px 30px rgba(0, 0, 0, 0.1)',
+borderRadius: '5px'
     }
   }),
 };
