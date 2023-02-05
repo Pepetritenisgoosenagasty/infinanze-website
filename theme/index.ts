@@ -200,6 +200,18 @@ export const theme: any = {
     '.ux-card': {
       boxShadow: '0px 4px 30px rgba(0, 0, 0, 0.1)',
 borderRadius: '5px'
+    },
+
+    '.main-card': {
+      
+      "&:hover .overlay": {
+       bottom: '0px',
+       height: '100%',
+       transition: 'bottom 0.3s ease-in',
+       'p': {
+        opacity: 1
+       }
+      }
     }
   }),
 };

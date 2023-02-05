@@ -21,7 +21,7 @@ const ListComponent = () => {
               <MdSettingsApplications size={20} />
             </ThemeIcon>
           }
-          onClick={() => router.push('/software-development')}
+          onClick={() => router.push('/services/software-development')}
         >
           Software Development 
         </List.Item>
@@ -32,7 +32,7 @@ const ListComponent = () => {
               <BsUiRadios size={20} />
             </ThemeIcon>
           }
-          onClick={() => router.push('/ux-design')}
+          onClick={() => router.push('/services/ux-design')}
         >
           UI/UX Design
         </List.Item>
@@ -43,6 +43,7 @@ const ListComponent = () => {
               <BsLaptop size={20} />
             </ThemeIcon>
           }
+          onClick={() => router.push('/services/it-consulting')}
         >
           IT Consulting
         </List.Item>
@@ -53,6 +54,7 @@ const ListComponent = () => {
               <FaLaptopCode size={20} />
             </ThemeIcon>
           }
+          onClick={() => router.push('/services/web-development')}
         >
           Web Development
         </List.Item>
@@ -63,8 +65,9 @@ const ListComponent = () => {
               <BsUiRadiosGrid size={20} />
             </ThemeIcon>
           }
+          onClick={() => router.push('/services/mobile-app-development')}
         >
-          IOS Development
+         Mobile App Development
         </List.Item>
        
       </List>

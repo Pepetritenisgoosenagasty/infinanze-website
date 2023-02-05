@@ -3,7 +3,7 @@ import { Carousel } from "@mantine/carousel";
 import { Card } from "@mantine/core";
 import Blockchain from "./Svg/Blockchain";
 
-const CarouselCard = ({ children }: any) => (
+export const CarouselCard = ({ children }: any) => (
   <>
     <div className="service-card border-t-2 border-[#0E7CFF] m-20">{children}</div>
   </>
