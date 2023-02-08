@@ -86,6 +86,7 @@ export const assetIndex = {
       pattern: '/assets/images/pattern.png',
       pattern2: '/assets/images/pattern2.png',
       pattern3: '/assets/images/pattern3.png',
+      andriod: '/assets/images/android.png',
     },
   };
   

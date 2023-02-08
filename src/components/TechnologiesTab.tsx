@@ -115,6 +115,7 @@ const TechnologiesTab = () => {
                     <CSS />
                     <JavaScript />
                   <ReactIcon />
+                  <Image src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt='' width={100} height={100}/>
                 </Group>
               </div>
               </div>
@@ -123,7 +124,8 @@ const TechnologiesTab = () => {
 
               <div className='my-6'>
                 <Group spacing="xl">
-                 <Image src={assetIndex.SVG.nodejs} alt=''width={100} height={100}/>
+                 <Image src={assetIndex.SVG.nodejs} alt='' width={100} height={100}/>
+                 <Image src="https://upload.wikimedia.org/wikipedia/commons/3/36/Logo.min.svg" alt=''width={100} height={100}/>
                 </Group>
               </div>
               </div>
