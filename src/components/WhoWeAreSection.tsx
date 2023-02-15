@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Text,
 } from "@mantine/core";
+import Link from "next/link";
 import { assetIndex } from "public/assets";
 import React from "react";
 import { BsChevronRight } from "react-icons/bs";
@@ -14,9 +15,9 @@ import { BsChevronRight } from "react-icons/bs";
 const WhoWeAreSection = () => {
   return (
     <div>
-      <SimpleGrid cols={3} spacing="lg">
+      <SimpleGrid cols={3} spacing="xl">
         <div>
-          <Card shadow="sm" p="lg" radius="md" w="full" withBorder>
+          <Card shadow="sm" p="lg" radius="md" w="full" withBorder sx={{minHeight: 350}}>
             <Card.Section>
               <Image
                 src={assetIndex.Image.explore1}
@@ -36,16 +37,20 @@ const WhoWeAreSection = () => {
               solutions for any OS, browser and <br /> device.
             </Text>
 
+            <Link href="/services/software-development" passHref>
             <div className="text-[#9320CC] flex items-center cursor-pointer mt-2">
-              <Text size="xs" weight={600} mr="sm">
-                READ MORE
+              <Text size="xs" weight={600} mr="sm" mt="sm">
+              FIND OUT MORE
               </Text>
-              <BsChevronRight fontSize={12} />
+              <div className="mt-3">
+             <BsChevronRight fontSize={12} />
+             </div>
             </div>
+            </Link>
           </Card>
         </div>
         <div>
-          <Card shadow="sm" p="lg" radius="md" withBorder>
+          <Card shadow="sm" p="lg" radius="md" withBorder sx={{minHeight: 350}}>
             <Card.Section>
               <Image
                 src={assetIndex.Image.explore2}
@@ -64,16 +69,20 @@ const WhoWeAreSection = () => {
             Our team can help to develop and implement an effective IT strategy, assist in smooth digital transformation and system integration. 
             </Text>
 
+            <Link href="/services/it-consulting" passHref>
             <div className="text-[#9320CC] flex items-center cursor-pointer mt-2">
-              <Text size="xs" weight={600} mr="sm">
-                READ MORE
+              <Text size="xs" weight={600} mr="sm" mt="sm">
+              FIND OUT MORE
               </Text>
-              <BsChevronRight fontSize={12} />
+              <div className="mt-3">
+             <BsChevronRight fontSize={12} />
+             </div>
             </div>
+            </Link>
           </Card>
         </div>
         <div>
-          <Card shadow="sm" p="lg" radius="md" withBorder>
+          <Card shadow="sm" p="lg" radius="md" withBorder sx={{minHeight: 350}}>
             <Card.Section>
               <Image
                 src={assetIndex.Image.explore3}
@@ -92,16 +101,20 @@ const WhoWeAreSection = () => {
             We have expert who are willing to develop a good interactive & responsive website to meet your specifications.
             </Text>
 
+            <Link href="/services/web-development" passHref>
             <div className="text-[#9320CC] flex items-center cursor-pointer mt-2">
-              <Text size="xs" weight={600} mr="sm">
-                READ MORE
+              <Text size="xs" weight={600} mr="sm" mt="sm">
+              FIND OUT MORE
               </Text>
-              <BsChevronRight fontSize={12} />
+              <div className="mt-3">
+             <BsChevronRight fontSize={12} />
+             </div>
             </div>
+            </Link>
           </Card>
         </div>
         <div>
-          <Card shadow="sm" p="lg" radius="md" withBorder>
+          <Card shadow="sm" p="lg" radius="md" withBorder sx={{minHeight: 350}}>
             <Card.Section>
               <Image
                 src={assetIndex.Image.explore4}
@@ -120,16 +133,20 @@ const WhoWeAreSection = () => {
             We create a responsive mobile application that fits your brand and can beat your competitors in the IT industry 
             </Text>
 
+            <Link href="/services/mobile-app-development" passHref>
             <div className="text-[#9320CC] flex items-center cursor-pointer mt-2">
-              <Text size="xs" weight={600} mr="sm">
-                READ MORE
+              <Text size="xs" weight={600} mr="sm" mt="sm">
+              FIND OUT MORE
               </Text>
-              <BsChevronRight fontSize={12} />
+              <div className="mt-3">
+             <BsChevronRight fontSize={12} />
+             </div>
             </div>
+            </Link>
           </Card>
         </div>
         <div>
-          <Card shadow="sm" p="lg" radius="md" withBorder>
+          <Card shadow="sm" p="lg" radius="md" withBorder sx={{minHeight: 350}}>
             <Card.Section>
               <Image
                 src={assetIndex.Image.explore5}
@@ -147,17 +164,20 @@ const WhoWeAreSection = () => {
             <Text size="md" color="dimmed">
             We create a responsive IOS application that fits your brand and can beat your competitors in the IT industry 
             </Text>
-
+            <Link href="/services/mobile-app-development" passHref>
             <div className="text-[#9320CC] flex items-center cursor-pointer mt-2">
-              <Text size="xs" weight={600} mr="sm">
-                READ MORE
+              <Text size="xs" weight={600} mr="sm" mt="sm">
+              FIND OUT MORE
               </Text>
-              <BsChevronRight fontSize={12} />
+              <div className="mt-3">
+             <BsChevronRight fontSize={12} />
+             </div>
             </div>
+            </Link>
           </Card>
         </div>
         <div>
-          <Card shadow="sm" p="lg" radius="md" withBorder>
+          <Card shadow="sm" p="lg" radius="md" withBorder sx={{minHeight: 350}}>
             <Card.Section>
               <Image
                 src={assetIndex.Image.explore6}
@@ -173,15 +193,20 @@ const WhoWeAreSection = () => {
             </Group>
 
             <Text size="md" color="dimmed">
-            We can develop reliable, scalable and secure software solutions for any OS, browser and device.
+            We design your product with a team that follows a defined design process, fulfills deadlines, and produces a high-quality end result
             </Text>
 
-            <div className="text-[#9320CC] flex items-center cursor-pointer mt-2">
-              <Text size="xs" weight={600} mr="sm">
-                READ MORE
+              <Link href="/services/ux-design" passHref>
+            <div className="text-[#9320CC] flex items-center cursor-pointer mt-2 h-full">
+              
+              <Text size="xs" weight={600} mr="sm" mt="sm">
+              FIND OUT MORE
               </Text>
-              <BsChevronRight fontSize={12} />
+             <div className="mt-3">
+             <BsChevronRight fontSize={12} />
+             </div>
             </div>
+              </Link>
           </Card>
         </div>
       </SimpleGrid>

@@ -53,3 +53,22 @@ export const solutions: SolutionsTypes[] = [
         name: 'ITSM',
     },
 ]
+
+
+export const solutions2 = [
+    {
+        id: 1,
+        title: "Web portals",
+        description: "We create web portals for different audiences: customers, business partners, ecommerce users, patients, vendors, interest-based communitie",
+    },
+    {
+        id: 2,
+        title: "Ecommerce",
+        description: "We create ecommerce solutions for B2C, B2B and marketplace business models. We can smoothly integrate an ecommerce component into your operating web app.",
+    },
+    {
+        id: 3,
+        title: "Web apps",
+        description: "We build web apps for efficient management system. We apply smart automation to streamline workflows and integrate corporate systems together for coherent operation",
+    },
+]
