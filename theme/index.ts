@@ -212,6 +212,205 @@ borderRadius: '5px'
         opacity: 1
        }
       }
-    }
+    },
+
+      // Media query with value from theme
+      [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+
+        '.header': {
+          width: '100%',
+          '.sub-header': {
+            paddingInline: "20px"
+          },
+          '.img': {
+            width: '90px !important'
+          }
+        },
+        '.btn': {
+          display: 'none',
+        },
+        '.lists': {
+          display: 'none'
+        },
+        ".my-prefix-18nhjeh" :{
+          width: "100%",
+          height: '500px !important'
+        },
+        ".carousel-img": {
+          width: "100%",
+          height: '500px !important'
+        },
+        ".carousel-items": {
+          img: {
+            width: "100%",
+            height: '500px !important'
+          },
+
+          h1: {
+            fontSize: "20px",
+            lineHeight:2
+          },
+
+          h5: {
+            fontSize: "12px",
+          },
+          '.text-area': {
+             width: "100%",
+          },
+          '.my-prefix-Carousel-controls': {
+            display: "none"
+          },
+         
+        },
+        '.avatars': {
+          top: "70%",
+          h5: {
+            fontSize: "14px",
+            textAlign: "center"
+          },
+          'img': {
+            width: "60px !important"
+          }
+        },
+        '.svg-area': {
+          bottom: '0 !important'
+        },
+        '.who-section': {
+          paddingBlock: "50px !important",
+          // h1: {
+          //   fontSize: "25px",
+          // },
+
+          '.who-text': {
+             width: "100% !important"
+          }
+        },
+
+        '.it-solution': {
+          paddingBlock: "50px !important",
+          paddingInline: "5px !important",
+          h1: {
+            fontSize: "25px",
+          },
+
+         '.ladder': {
+          svg: {
+            width: "100%"
+          }
+         },
+         '.img': {
+          svg: {
+            width: "100%"
+          }
+         }
+        },
+        '.review': {
+          ".my-prefix-oqtyjo": {
+            left: "37% !important"
+        }
+        },
+        '.my-prefix-pildck': {
+          fontSize: "12px !important",
+        },
+        '.my-prefix-ukbbnm': {
+          fontSize: "12px !important", 
+        },
+
+        ".hero-section": {
+          width: "100%",
+          height: '400px !important',
+         ".banner": {
+          width: "100%",
+          height: '400px !important'
+         },
+
+          '.text-section': {
+            width: "100%",
+            paddingInline: "70px"
+          },
+          ".svg-area": {
+            bottom: ""
+          },
+          h1: {
+            fontSize: "30px",
+            // lineHeight:2
+          },
+
+          h5: {
+            fontSize: "12px",
+          },
+         
+  
+         
+        },
+
+
+      },
+      [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+        '.header': {
+          width: '100%',
+          '.sub-header': {
+            paddingInline: "20px"
+          },
+          '.img': {
+            width: '90px !important'
+          }
+        },
+        '.btn': {
+          display: 'none',
+        },
+        '.lists': {
+          display: 'none'
+        },
+        ".my-prefix-18nhjeh" :{
+          width: "100%",
+          height: '500px !important'
+        },
+        ".carousel-img": {
+          width: "100%",
+          height: '500px !important'
+        },
+        ".carousel-items": {
+          img: {
+            width: "100%",
+            height: '500px !important'
+          },
+
+          h1: {
+            fontSize: "20px",
+            lineHeight:2
+          },
+
+          h5: {
+            fontSize: "12px",
+            paddingInline: 100
+          },
+          '.text-area': {
+             width: "100%",
+          },
+          '.my-prefix-Carousel-controls': {
+            display: "none"
+          },
+         
+        },
+        '.avatars': {
+          top: "70%",
+          h5: {
+            fontSize: "14px",
+            textAlign: "center"
+          },
+          'img': {
+            width: "60px !important"
+          }
+        },
+        '.svg-area': {
+          bottom: '0 !important'
+        },
+        '.ladder': {
+          svg: {
+            width: "100%"
+          }
+         },
+      }
   }),
 };

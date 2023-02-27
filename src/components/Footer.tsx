@@ -8,6 +8,7 @@ import {
   TextInput,
   ThemeIcon,
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -18,11 +19,18 @@ import { InputWithButton } from "./EmailForm";
 
 const Footer = () => {
   const router = useRouter()
+
+  const largeScreen = useMediaQuery('(min-width: 900px)');
+
   return (
-    <footer className="min-h-[300px] bg-[#052D92] text-white py-12 px-[150px]">
+    <footer className={`min-h-[300px] bg-[#052D92] text-white py-12  ${largeScreen ? "px-[150px]" : "px-6"}`}>
       <div className="container mx-auto">
-        <SimpleGrid cols={4}>
-          <div className="mt-12">
+        <SimpleGrid cols={4} breakpoints={[
+        { maxWidth: 980, cols: 2, spacing: 'md' },
+        { maxWidth: 755, cols: 2, spacing: 'sm' },
+        { maxWidth: 600, cols: 1, spacing: 'sm' },
+      ]}>
+          <div className={`${largeScreen ? "mt-12" : "mt-2"}`}>
             <p className="text-sm">
               We are a software and hardware <br />
               company who help individuals and <br />
@@ -58,7 +66,7 @@ const Footer = () => {
               </Group>
             </div>
           </div>
-          <div className="mx-12">
+          <div className={`${largeScreen ? "mx-12" : "my-6"}`}>
             <h1 className="text-[18px] font-[600]">Quick Links</h1>
             <ul className="text-sm space-y-4 mt-6">
               <li>
@@ -128,7 +136,7 @@ const Footer = () => {
               </List>
             </div>
           </div>
-          <div>
+          <div className={` ${largeScreen ? "mt-0" : "mt-10"}`}>
             <h1 className="text-[18px] font-[600]">Newsletter</h1>
             <p className="text-sm mt-6">
               Stay in touch to keep up with the <br />

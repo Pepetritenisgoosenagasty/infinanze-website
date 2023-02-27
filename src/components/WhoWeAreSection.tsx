@@ -7,15 +7,21 @@ import {
   SimpleGrid,
   Text,
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import Link from "next/link";
 import { assetIndex } from "public/assets";
 import React from "react";
 import { BsChevronRight } from "react-icons/bs";
 
 const WhoWeAreSection = () => {
+  const largeScreen = useMediaQuery('(min-width: 900px)');
   return (
     <div>
-      <SimpleGrid cols={3} spacing="xl">
+      <SimpleGrid cols={3} spacing="xl" breakpoints={[
+        { maxWidth: 980, cols: 2, spacing: 'md' },
+        { maxWidth: 755, cols: 2, spacing: 'sm' },
+        { maxWidth: 600, cols: 1, spacing: 'sm' },
+      ]}>
         <div>
           <Card shadow="sm" p="lg" radius="md" w="full" withBorder sx={{minHeight: 350}}>
             <Card.Section>

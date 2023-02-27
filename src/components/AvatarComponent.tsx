@@ -1,7 +1,9 @@
 import { Image } from '@mantine/core';
 import { assetIndex } from 'public/assets';
+import { useMediaQuery } from '@mantine/hooks';
 
 export const AvatarComponent = () => {
+  const smallScreen = useMediaQuery('(min-width: 768px)');
   return (
     <div className='flex flex-wrap items-center justify-center space-x-6'>
      <div className='flex'>

@@ -33,6 +33,7 @@ function StyledTabs(props: TabsProps) {
             fontSize: theme.fontSizes.sm,
             fontWeight: 'bold',
             display: 'flex',
+            flexWrap: 'wrap',
             alignItems: 'center',
   
             '&:disabled': {
@@ -54,6 +55,7 @@ function StyledTabs(props: TabsProps) {
   
           tabsList: {
             display: 'flex',
+            flexWrap: 'wrap',
           },
         })}
         {...props}

@@ -1,4 +1,5 @@
 import { Card, SimpleGrid, Tabs, TabsProps } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
 import { BsArrowRight, BsArrowRightCircle } from "react-icons/bs";
 import Check from "./Svg/Check";
@@ -60,6 +61,9 @@ function StyledTabs(props: TabsProps) {
 }
 
 const ServicesSection = () => {
+
+  const largeScreen = useMediaQuery('(min-width: 900px)');
+
   const Styles = {
     border: "none",
     // height: '50px',
@@ -72,7 +76,7 @@ const ServicesSection = () => {
   };
   return (
     <StyledTabs unstyled>
-      <div className="flex items-center px-[100px] my-16 ">
+      <div className={`flex items-center my-16 ${largeScreen ? "px-[100px]" : " flex-col"}`}>
         <div className="w-[280px] bg-[#1974FB] min-h-[500px] rounded-lg py-10">
           <div>
             <Tabs.List>
@@ -127,33 +131,33 @@ const ServicesSection = () => {
             </Tabs.List>
           </div>
         </div>
-        <div className="grow ml-10 text-left rounded-lg min-h-[500px] service-card p-20">
+        <div className={`grow text-left rounded-lg min-h-[500px] service-card ${largeScreen ? " ml-10 p-20" : "p-10 mt-10 mx-6"}`}>
           <Tabs.Panel value="big_data">
-            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <h1 className="text-[20px] md:text-[26px] font-[600]">Services we offer</h1>
             <p className="my-8 text-sm">
               Tame your big data through robust solutions that empower data
               collection, storage, <br /> processing and analysis
             </p>
-            <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+            <SimpleGrid cols={largeScreen ? 2 : 1} spacing="xl" verticalSpacing="xl">
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Consulting and implemetation
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Support and Evolution
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">Data security</h4>
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">Data security</h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">Data governance</h4>
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">Data governance</h4>
               </div>
             </SimpleGrid>
             <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
@@ -164,32 +168,32 @@ const ServicesSection = () => {
             </div>
           </Tabs.Panel>
           <Tabs.Panel value="artificial_intelligent">
-            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <h1 className="text-[20px] md:text-[26px] font-[600]">Services we offer</h1>
             <p className="my-8 text-sm">
               With AI and ML technologies that simulate human intelligence,
               decision-making, <br /> planning, and forecasting can be improved,
               and corporate processes can be overhauled.
             </p>
-            <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+            <SimpleGrid cols={largeScreen ? 2 : 1} spacing="xl" verticalSpacing="xl">
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">Robotics</h4>
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">Robotics</h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Image recognition
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Machine learning
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[20px] md:text-[26px] font-[500] ml-2">
                   Natural language processing{" "}
                 </h4>
               </div>
@@ -202,32 +206,32 @@ const ServicesSection = () => {
             </div>
           </Tabs.Panel>
           <Tabs.Panel value="computer_vision">
-            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <h1 className="text-[20px] md:text-[26px] font-[600]">Services we offer</h1>
             <p className="my-8 text-sm font-normal">
               Obtain useful information from photos and videos.
             </p>
-            <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+            <SimpleGrid cols={largeScreen ? 2 : 1} spacing="xl" verticalSpacing="xl">
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   3D modelling and mapping
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Barcode verification and validation.
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Recognition of item location and positioning
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Detection of visual defects and anomalies
                 </h4>
               </div>
@@ -240,32 +244,32 @@ const ServicesSection = () => {
             </div>
           </Tabs.Panel>
           <Tabs.Panel value="Internet_things">
-          <h1 className="text-[26px] font-[600]">Services we offer</h1>
+          <h1 className="text-[20px] md:text-[26px] font-[600]">Services we offer</h1>
             <p className="my-8 text-sm">
             Create &quote;smart&quote; operations by gathering, storing, and analyzing sensor data.
             </p>
-            <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+            <SimpleGrid cols={largeScreen ? 2 : 1} spacing="xl" verticalSpacing="xl">
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                 IOT solution development
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                 IoT Analytics
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                 IoT Consulting
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                 IoT Evolution
                 </h4>
               </div>
@@ -278,7 +282,7 @@ const ServicesSection = () => {
             </div>
           </Tabs.Panel>
           <Tabs.Panel value="blockchain">
-            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <h1 className="text-[20px] md:text-[26px] font-[600]">Services we offer</h1>
             <p className="my-8 text-sm">
               Find products that will improve transaction security,
               traceability, and processing speed.
@@ -286,13 +290,13 @@ const ServicesSection = () => {
             <SimpleGrid cols={1} spacing="xl" verticalSpacing="xl">
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Blockchain-based product development for product companies
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Blockchain consulting and implementation for non-IT
                   enterprises
                 </h4>
@@ -306,7 +310,7 @@ const ServicesSection = () => {
             </div>
           </Tabs.Panel>
           <Tabs.Panel value="mixed_reality">
-            <h1 className="text-[26px] font-[600]">Services we offer</h1>
+            <h1 className="text-[20px] md:text-[26px] font-[600]">Services we offer</h1>
             <p className="my-8 text-sm">
               To make routine jobs and activities easier, safer, and more
               entertaining, blur the <br /> boundaries between the real world
@@ -315,19 +319,19 @@ const ServicesSection = () => {
             <SimpleGrid cols={1} spacing="xl" verticalSpacing="xl">
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Virtual reality development
                 </h4>
               </div>
               <div className="flex items-center">
                 <Check />
-                <h4 className="text-[16px] font-[500] ml-2">
+                <h4 className="text-[14px] md:text-[16px] font-[500] ml-2">
                   Argumented reality development
                 </h4>
               </div>
             </SimpleGrid>
             <div className="pt-24 text-[#1974FB] flex items-center justify-end cursor-pointer">
-              <h5 className="text-[#1974FB] font-bold text-[16px] mr-2">
+              <h5 className="text-[#1974FB] font-bold text-[14px] md:text-[16px] mr-2">
                 Find out more
               </h5>
               <BsArrowRightCircle />
