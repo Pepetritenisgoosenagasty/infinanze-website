@@ -64,7 +64,7 @@ const Header = () => {
 
   const router = useRouter();
 
-  const dropdownRef = React.useRef(null);
+  const dropdownRef = React.useRef<null>(null);
 
   // Header Animation
   useEffect(() => {
@@ -92,8 +92,8 @@ const Header = () => {
 
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: any) => {
+      if (dropdownRef.current ) {
         setShow(false);
         setNav(false);
       }
