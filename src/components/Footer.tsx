@@ -98,13 +98,15 @@ const Footer = () => {
             <div className="mt-6">
               <List spacing="sm" size="sm" c="white" center>
                 <List.Item
+                   sx={{lineHeight: 1.6}}
                   icon={
                     <ThemeIcon bg="#052D92">
                       <BiMap size={16} />
                     </ThemeIcon>
                   }
                 >
-                  Kufsteiner Strasse 84, 10825
+                  7703 Kelburn lane, <br /> North Carolina 
+Charlotte
                 </List.Item>
                 <List.Item
                   icon={
@@ -113,7 +115,7 @@ const Footer = () => {
                     </ThemeIcon>
                   }
                 >
-                  (+49) 15123172822
+                   (+1) 9803611860
                 </List.Item>
                 <List.Item
                   icon={

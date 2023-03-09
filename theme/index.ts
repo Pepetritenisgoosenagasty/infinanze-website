@@ -340,9 +340,13 @@ borderRadius: '5px'
             fontSize: "12px",
           },
          
-  
-         
+          
         },
+        '.process': {
+          '.my-prefix-4ny9bc': {
+            display: "none !important"
+          }
+        } 
 
 
       },
