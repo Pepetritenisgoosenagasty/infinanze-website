@@ -27,23 +27,23 @@ const UxDesign = () => {
     <>
       <PageTitle title="Infinanze | ui/ux Design" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
-        <section className="w-full max-h-[900px] relative">
+        <section className="w-full max-h-[900px] relative hero-section">
           <Header />
           <Image
-            className="w-screen h-[900px] bg-cover bg-center"
+            className="w-screen h-[900px] bg-cover bg-center banner"
             width={900}
             height={900}
             src={assetIndex.Image.banner4}
             alt="banner"
           />
-          <div className="absolute top-[45%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center">
+          <div className="absolute top-[50%] md:top-[45%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center w-full md:w-[700px]">
             <h1 className="text-[#fff] text-[60px] font-bold leading-tight">
             IT Consulting
             </h1>
-            <h5 className="text-[#fff] text-[22px] font-medium mt-4">
+            <h5 className="text-[#fff] text-[22px] font-medium mt-4 px-4 md:px-0">
             With our indepth Knowledge in IT consulting, we can help transform your organization to suit your business needs by developing and implementing an effective IT strategy.
             </h5>
-            <div className="mt-16 nav-btn w-full">
+            <div className="mt-6 md:mt-16 nav-btn w-full avatars">
             <AvatarComponent />
             </div>
           </div>
@@ -52,18 +52,19 @@ const UxDesign = () => {
             <GradientBg />
           </div>
         </section>
-        <section className={`pt-20 px-[50px] min-h-[200px] container mx-auto `}>
+        <section className={`pb-20 pt-20 px-[50px] min-h-[200px] container mx-auto `}>
             <div className="text-center">
-                <p className="font-[14px]">We offer IT consulting services that will help you improve your software architecture, create a <br /> tech-driven digital strategy, and improve operations by optimising your software portfolio, <br /> assisting  in smooth digital transformation and system integration</p>
+                <p className="text-[14px] hidden lg:block">We offer IT consulting services that will help you improve your software architecture, create a <br /> tech-driven digital strategy, and improve operations by optimising your software portfolio, <br /> assisting  in smooth digital transformation and system integration</p>
+                <p className="text-[14px] block lg:hidden">We offer IT consulting services that will help you improve your software architecture, create a tech-driven digital strategy, and improve operations by optimising your software portfolio, assisting  in smooth digital transformation and system integration</p>
             </div>
         </section>
         <section className={` px-[50px] min-h-[600px] container mx-auto `}>
-          <div  className="flex items-center justify-center space-x-8">
-            <div>
+          <div  className="flex items-center justify-center flex-col md:flex-col lg:flex-row space-x-8">
+            <div className="ui">
               <Software />
             </div>
             <div>
-            <h1 className="text-[30px] font-bold mb-4 text-[#121212B2]" >What to expect</h1>
+            <h1 className="text-[25px] md:text-[30px] font-bold mb-4 text-[#121212B2]" >What to expect</h1>
                  <List spacing="sm" size="sm" center>
                 <List.Item
                   icon={
@@ -182,27 +183,29 @@ const UxDesign = () => {
           <div className="absolute -top-[10px] left-0 z-10">
             <Image className="z-10" src={assetIndex.Image.pattern} alt="" width={450} height={500}/>
           </div>
-          <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center">
+          <div className="px-6">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center">
             OUR IT CONSULTING PROCESS
             </h1>
-            <p className="my-4 text-center">We have experience helping organizations envision, strategize and build process models that integrate <br /> their business goals with their people and processes. We identify critical and key processes for <br /> optimization and integrate technology with the process models to help you realize your returns faster <br /> and more efficiently.</p>
+            <p className="my-4 text-center hidden lg:block">We have experience helping organizations envision, strategize and build process models that integrate <br /> their business goals with their people and processes. We identify critical and key processes for <br /> optimization and integrate technology with the process models to help you realize your returns faster <br /> and more efficiently.</p>
+            <p className="my-4 text-center block lg:hidden">We have experience helping organizations envision, strategize and build process models that integrate  their business goals with their people and processes. We identify critical and key processes for optimization and integrate technology with the process models to help you realize your returns faster and more efficiently.</p>
           </div>
-          <div className="min-h-[600px] mx-auto px-[180px] z-10 my-10 bg-[url('/assets/svg/banner.svg')] py-20 relative bg-no-repeat bg-cover bg-center process">
+          <div className="min-h-[600px] mx-auto md:px-[180px] z-10 my-10 bg-[url('/assets/svg/banner.svg')] py-20 relative bg-no-repeat bg-cover bg-center process">
           <ProcessCarousel />
         </div>
         
         </section>
         
-        <section className={`px-[50px] py-[50px] min-h-[700px] container mx-auto relative`}>
+        <section className={`md:px-[50px] py-[50px] min-h-[700px] container mx-auto relative`}>
         <div className="absolute -top-[100px] right-0">
             <Image src={assetIndex.Image.pattern2} alt="" width={300} height={500}/>
           </div>
-          <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center">
+          <div className="px-6">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center">
             OUR APPROOACH TO IT STRATEGY CONSULTING. <br /> THE NEW TECHNOLOGY
             </h1>
-            <p className="my-4 text-center">With expertise in both business and technology, our IT strategy consultants can facilitate <br /> development of an integrated IT strategy for the organization. We help companies improve <br /> their technological processes by identifying areas for improvement.</p>
+            <p className="my-4 text-center hidden lg:block">With expertise in both business and technology, our IT strategy consultants can facilitate <br /> development of an integrated IT strategy for the organization. We help companies improve <br /> their technological processes by identifying areas for improvement.</p>
+            <p className="my-4 text-center block lg:hidden">With expertise in both business and technology, our IT strategy consultants can facilitate development of an integrated IT strategy for the organization. We help companies improve their technological processes by identifying areas for improvement.</p>
           </div>
           <div className="px-10 my-20">
             <ApproachContent />   
@@ -214,29 +217,30 @@ const UxDesign = () => {
 
         <section className={`px-[50px] pb-[50px] min-h-[700px] container mx-auto relative`}>
         <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center">
             EMERGING TECH TO DRIVE MORE VALUE <br /> ALONG YOUR DIGITAL JOURNEY
             </h1>
-            <p className="my-4 text-center">We always keeps track of emerging technologies to deliver forward-thinking solutions. From the highest <br /> level of security with blockchain to reliable automation with AI/ML — use every benefit for your solution</p>
+            <p className="my-4 text-center hidden lg:block">We always keeps track of emerging technologies to deliver forward-thinking solutions. From the highest <br /> level of security with blockchain to reliable automation with AI/ML — use every benefit for your solution</p>
+            <p className="my-4 text-center block lg:hidden">We always keeps track of emerging technologies to deliver forward-thinking solutions. From the highest level of security with blockchain to reliable automation with AI/ML — use every benefit for your solution</p>
           </div>
           <div className="max-w-[1000px] m-auto py-12">
             <TechContent />
           </div>
         </section>
-        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
+        <section className=" min-h-full px-10 py-10 md:min-h-[600px] mx-auto md:px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
           <ExpertSection />
         </section>
-        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[#F5F5F5] py-10">
-        <div>
-              <h1 className="text-[#000] text-[28px] font-bold text-center">
+        <section className="min-h-[600px] mx-auto px-6 md:px-[180px] relative bg-[#F5F5F5] py-10">
+          <div>
+            <h1 className="text-[#000] text-[28px] font-bold text-center">
               Our Frequently asked Questions
-              </h1>
-            </div>
-            
-            <div className=" my-12">
+            </h1>
+          </div>
+
+          <div className=" my-12">
             <AccordionContent />
           </div>
-        </section> 
+        </section>
       </main>
       <Footer />
     </>

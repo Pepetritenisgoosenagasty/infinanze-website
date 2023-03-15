@@ -40,13 +40,12 @@ import GradientBg from "@/components/Svg/GradientBg";
 import ExpertSection from "@/components/ExpertSection";
 import { useMediaQuery } from "@mantine/hooks";
 
-
 const raleway = Raleway({ subsets: ["latin"] });
 
 export default function Home() {
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
-  const largeScreen = useMediaQuery('(min-width: 900px)');
+  const largeScreen = useMediaQuery("(min-width: 900px)");
 
   const images = [
     {
@@ -156,13 +155,27 @@ export default function Home() {
             </p>
           </div>
           <div className={`${largeScreen ? "my-12" : "my-0"}`}>
-            <div className={`${largeScreen ? "flex items-center" : "flex flex-col items-center px-6"}`}>
-              <div >
+            <div
+              className={`${
+                largeScreen
+                  ? "flex items-center"
+                  : "flex flex-col items-center px-6"
+              }`}
+            >
+              <div>
                 <div className="ladder md:mt-10">
-                <Ladder />
+                  <Ladder />
                 </div>
-                <div className={`text-[#1974FB] flex items-center cursor-pointer ${largeScreen ? "pt-24 ml-24 ": "pt-2 ml-0"}`}>
-                  <h5 className={`"text-[#1974FB] font-bold text-[16px]" ${largeScreen ? " mr-2": " mr-6"}`}>
+                <div
+                  className={`text-[#1974FB] flex items-center cursor-pointer ${
+                    largeScreen ? "pt-24 ml-24 " : "pt-2 ml-0"
+                  }`}
+                >
+                  <h5
+                    className={`"text-[#1974FB] font-bold text-[16px]" ${
+                      largeScreen ? " mr-2" : " mr-6"
+                    }`}
+                  >
                     Find out more
                   </h5>
                   <BsArrowRightCircle />
@@ -196,7 +209,11 @@ export default function Home() {
             <ServicesSection />
           </div>
         </section>
-        <section className={`container min-h-[600px]  mx-auto  flex flex-col text-center my-10 ${largeScreen ? "px-[100px]" : "px-6"}`}>
+        <section
+          className={`container min-h-[600px]  mx-auto  flex flex-col text-center my-10 ${
+            largeScreen ? "px-[100px]" : "px-6"
+          }`}
+        >
           <div>
             <h1 className="text-[#000] text-[20px] md:text-[28px] font-bold text-center">
               Solutions We Deliver
@@ -208,12 +225,21 @@ export default function Home() {
               <br /> interaction and internal operation.
             </p>
           </div>
-          <div className={`rounded-lg min-h-[500px] service-card my-8 border-t-2 border-[#4059EC]  ${largeScreen ? "p-20" : "p-10"}`}>
-            <SimpleGrid cols={3 } spacing="xl" verticalSpacing="xl" breakpoints={[
-        { maxWidth: 980, cols: 2, spacing: 'md' },
-        { maxWidth: 755, cols: 2, spacing: 'sm' },
-        { maxWidth: 600, cols: 1, spacing: 'sm' },
-      ]}>
+          <div
+            className={`rounded-lg min-h-[500px] service-card my-8 border-t-2 border-[#4059EC]  ${
+              largeScreen ? "p-20" : "p-10"
+            }`}
+          >
+            <SimpleGrid
+              cols={3}
+              spacing="xl"
+              verticalSpacing="xl"
+              breakpoints={[
+                { maxWidth: 980, cols: 2, spacing: "md" },
+                { maxWidth: 755, cols: 2, spacing: "sm" },
+                { maxWidth: 600, cols: 1, spacing: "sm" },
+              ]}
+            >
               {solutions.map((solution, i) => (
                 <>
                   <div className="bg-[url('/assets/images/solution.png')] bg-no-repeat bg-cover bg-center w-full h-[90px] rounded-[8px] text-white font-[700] text-[14px] md:text-[20px] flex items-center justify-center break-words px-10">
@@ -224,7 +250,11 @@ export default function Home() {
             </SimpleGrid>
           </div>
         </section>
-        <section className={`container min-h-[600px] mx-auto  flex flex-col text-center my-16 ${largeScreen ? "px-[100px]" : "px-6"}`}>
+        <section
+          className={`container min-h-[600px] mx-auto  flex flex-col text-center my-16 ${
+            largeScreen ? "px-[100px]" : "px-6"
+          }`}
+        >
           <div>
             <h1 className="text-[#000] text-[20px] md:text-[28px] font-bold text-center">
               Technologies and platform we work with
@@ -232,7 +262,11 @@ export default function Home() {
           </div>
           <TechnologiesTab />
         </section>
-        <section className={`min-h-[340px] mx-auto flex flex-col text-center pt-16 bg-[#F5F5F5] ${largeScreen ? "px-[100px]" : "w-full"}`}>
+        <section
+          className={`min-h-[340px] mx-auto flex flex-col text-center pt-16 bg-[#F5F5F5] ${
+            largeScreen ? "px-[100px]" : "w-full"
+          }`}
+        >
           <div className={` ${largeScreen ? "px-20" : "px-6"}`}>
             <div>
               <h1 className="text-[#000] text-[20px] md:text-[28px] font-bold text-center">
@@ -249,10 +283,18 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={` mx-auto  relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center ${largeScreen ? "min-h-[600px] px-[180px]" : "min-h-full px-10 py-10"}`}>
+        <section
+          className={` mx-auto  relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center ${
+            largeScreen ? "min-h-[600px] px-[180px]" : "min-h-full px-10 py-10"
+          }`}
+        >
           <ExpertSection />
         </section>
-        <section className={`mx-auto  bg-[#F5F5F5] relative pt-20 ${largeScreen ? "px-[180px] min-h-[950px]" : "px-6 min-h-full"}`}>
+        <section
+          className={`mx-auto  bg-[#F5F5F5] relative pt-20 ${
+            largeScreen ? "px-[180px] min-h-[950px]" : "px-6 min-h-full"
+          }`}
+        >
           <div>
             <h1 className="text-[#000] text-[20px] md:text-[28px] font-bold text-center">
               Our Expertise
@@ -266,11 +308,16 @@ export default function Home() {
             </p>
           </div>
           <div className=" py-16">
-            <SimpleGrid cols={4} spacing="xl" verticalSpacing="xl" breakpoints={[
-        { maxWidth: 980, cols: 2, spacing: 'md' },
-        { maxWidth: 755, cols: 2, spacing: 'sm' },
-        { maxWidth: 600, cols: 1, spacing: 'sm' },
-      ]}>
+            <SimpleGrid
+              cols={4}
+              spacing="xl"
+              verticalSpacing="xl"
+              breakpoints={[
+                { maxWidth: 980, cols: 2, spacing: "md" },
+                { maxWidth: 755, cols: 2, spacing: "sm" },
+                { maxWidth: 600, cols: 1, spacing: "sm" },
+              ]}
+            >
               {expertises.map((solution, i) => (
                 <>
                   <ExpertsCard name={solution.name} />
@@ -279,7 +326,11 @@ export default function Home() {
             </SimpleGrid>
           </div>
         </section>
-        <section className={`min-h-[600px] mx-auto  relative bg-[#F5F5F5] py-10 ${largeScreen ? "px-[180px]" : "px-6"}`}>
+        <section
+          className={`min-h-[600px] mx-auto  relative bg-[#F5F5F5] py-10 ${
+            largeScreen ? "px-[180px]" : "px-6"
+          }`}
+        >
           <div>
             <h1 className="text-[#000] text-[20px] md:text-[28px] font-bold text-center">
               Our Frequently asked Questions

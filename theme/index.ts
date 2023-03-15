@@ -346,7 +346,14 @@ borderRadius: '5px'
           '.my-prefix-4ny9bc': {
             display: "none !important"
           }
-        } 
+        } ,
+
+        '.ui': {
+          svg: {
+            width: "100%",
+            height: "100%",
+          }
+        }
 
 
       },

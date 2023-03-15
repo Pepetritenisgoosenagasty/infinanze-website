@@ -20,38 +20,47 @@ const UxDesign = () => {
     <>
       <PageTitle title="Infinanze | ui/ux Design" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
-        <section className="w-full max-h-[900px] relative">
+        <section className="w-full max-h-[900px] relative hero-section">
           <Header />
           <Image
-            className="w-screen h-[900px] bg-cover bg-center"
+            className="w-screen h-[900px] bg-cover bg-center banner"
             width={900}
             height={900}
             src={assetIndex.Image.banner4}
             alt="banner"
           />
-          <div className="absolute top-[40%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center">
+          <div className="absolute top-[40%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center w-full">
             <h1 className="text-[#fff] text-[60px] font-bold leading-tight">
               UI/UX Design
             </h1>
-            <h5 className="text-[#fff] text-[22px] font-medium mt-4">
+            <h5 className="text-[#fff] text-[22px] font-medium mt-4 hidden md:block">
               Get your project estimations for well-informed business <br />{" "}
               decisions and top-notch digital outcomes
             </h5>
+            <h5 className="text-[#fff] text-[22px] font-medium mt-4 block md:hidden px-4">
+              Get your project estimations for well-informed business
+              decisions and top-notch digital outcomes
+            </h5>
           </div>
-          <div className="absolute top-[68%] left-[50%] -translate-y-[50%] -translate-x-[50%]">
+          <div className="absolute top-[68%] left-[50%] -translate-y-[50%] -translate-x-[50%] avatars">
             <AvatarComponent />
           </div>
           <div className="absolute bottom-0 w-full">
             <GradientBg />
           </div>
         </section>
-        <section className={`py-20 px-[50px] min-h-[300px] container mx-auto `}>
+        <section className={`py-20 px-10 md:px-[50px] min-h-[300px] container mx-auto `}>
             <div className="text-center">
-                <p className="font-[14px]">We are a software development company that provides software engineering <br /> solutions, helping Fortune 500 companies and enterprise clients untangle complex <br /> issues that always emerge during their digital evolution journey. </p>
+                <p className="font-[14px] hidden md:block">We are a software development company that provides software engineering <br /> solutions, helping Fortune 500 companies and enterprise clients untangle complex <br /> issues that always emerge during their digital evolution journey. </p>
+                <p className="font-[14px] block md:hidden">We are a software development company that provides software engineering solutions, helping Fortune 500 companies and enterprise clients untangle complex  issues that always emerge during their digital evolution journey. </p>
             </div>
         </section>
         <section className={` px-[50px] min-h-[600px] container mx-auto `}>
-          <SimpleGrid cols={2} spacing="xl" verticalSpacing="xl">
+          <SimpleGrid  breakpoints={[
+        { minWidth: 'sm', cols: 1 },
+        { minWidth: 'md', cols: 1 },
+        { minWidth: 1200, cols: 2 },
+      ]} spacing="xl" verticalSpacing="xl">
             <div>
             <Image
                 src={assetIndex.Image.ux}
@@ -62,9 +71,9 @@ const UxDesign = () => {
             </div>
             <div>
                 <div className="min-w-[300px] min-h-[500px] ux-card px-12 py-8">
-                 <h1 className="text-[30px] font-medium">UI/UX Design</h1>
-                 <p className="py-2 font-[14px]">User experience and user interface design for all types of <br /> websites, SaaS, and web/mobile apps. We combine <br /> the latest UI/UX trends with our customers’ individual goals <br /> and needs to deliver intuitive, vibrant, and impactful designs that <br /> power up businesses </p>
-                 <h1 className="text-[30px] font-medium mb-4">Benefits</h1>
+                 <h1 className="text-[20px] md:text-[30px] font-medium">UI/UX Design</h1>
+                 <p className="py-2 text-[12px] md:font-[14px]">User experience and user interface design for all types of <br /> websites, SaaS, and web/mobile apps. We combine <br /> the latest UI/UX trends with our customers’ individual goals <br /> and needs to deliver intuitive, vibrant, and impactful designs that <br /> power up businesses </p>
+                 <h1 className="text-[20px] md:text-[30px] font-medium mb-4">Benefits</h1>
                  <List spacing="sm" size="sm" center>
                 <List.Item
                   icon={
@@ -107,33 +116,33 @@ const UxDesign = () => {
             </div>
           </SimpleGrid>
         </section>
-        <section className={`px-[50px] py-[50px] min-h-[700px] container mx-auto`}>
+        <section className={`px-[50px] py-[50px] md:min-h-[700px] container mx-auto`}>
           <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center">
             How we Deliver UI and UX Services
             </h1>
 
             <h5 className="text-sm font-medium text-center py-8">UX process</h5>
           </div>
-          <div className="my-10 flex items-center justify-center">
+          <div className="md:my-10 flex items-center justify-center ui">
             <UIdesign />
           </div>
         </section>
 
-        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
+        <section className=" min-h-full px-10 py-10 md:min-h-[600px] mx-auto md:px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
           <ExpertSection />
         </section>
-        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[#F5F5F5] py-10">
-        <div>
-              <h1 className="text-[#000] text-[28px] font-bold text-center">
+        <section className="min-h-[600px] mx-auto px-6 md:px-[180px] relative bg-[#F5F5F5] py-10">
+          <div>
+            <h1 className="text-[#000] text-[28px] font-bold text-center">
               Our Frequently asked Questions
-              </h1>
-            </div>
-            
-            <div className=" my-12">
+            </h1>
+          </div>
+
+          <div className=" my-12">
             <AccordionContent />
           </div>
-        </section> 
+        </section>
       </main>
       <Footer />
     </>

@@ -8,7 +8,11 @@ import React from 'react'
 const TechContent = () => {
   return (
     <>
-      <SimpleGrid cols={3} spacing="xl">
+      <SimpleGrid cols={3}  breakpoints={[
+        { maxWidth: 980, cols: 2, spacing: 'md' },
+        { maxWidth: 755, cols: 2, spacing: 'sm' },
+        { maxWidth: 600, cols: 1, spacing: 'sm' },
+      ]} spacing="xl">
        {
         techies.map((tech, i) => (
             <>

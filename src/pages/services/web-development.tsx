@@ -1,17 +1,9 @@
-import { AccordionContent } from "@/components/AccordionContent";
-import ApproachContent from "@/components/ApproachContent";
-import { AvatarComponent } from "@/components/AvatarComponent";
-import ConsultCarousel, { CarouselCard } from "@/components/ConsultCarousel";
 import CustomCard from "@/components/CustomCard";
 import ExpertSection from "@/components/ExpertSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
-import ProcessCarousel from "@/components/ProcessCarousel";
 import GradientBg from "@/components/Svg/GradientBg";
-import Pattern from "@/components/Svg/Pattern";
-import Software from "@/components/Svg/software";
-import { UIdesign } from "@/components/Svg/UIdesign";
 import TechContent from "@/components/TechContent";
 import { solutions2 } from "@/data/Solutions";
 import { developers, fullScaleData, pricing } from "@/data/tech";
@@ -21,7 +13,6 @@ import Image from "next/image";
 import { assetIndex } from "public/assets";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { GoPrimitiveDot } from "react-icons/go";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -30,24 +21,24 @@ const WebDevelopment = () => {
     <>
       <PageTitle title="Infinanze | Web Development" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
-        <section className="w-full max-h-[900px] relative">
+        <section className="w-full max-h-[900px] relative hero-section">
           <Header />
           <Image
-            className="w-screen h-[900px] bg-cover bg-center"
+            className="w-screen h-[900px] bg-cover bg-center banner"
             width={900}
             height={900}
             src={assetIndex.Image.banner4}
             alt="banner"
           />
-          <div className="absolute top-[45%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center">
+          <div className="absolute top-[50%] md:top-[45%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center w-full md:w-[700px] px-6 md:px-6">
             <h1 className="text-[#fff] text-[60px] font-bold leading-tight">
               Web Development
             </h1>
             <h5 className="text-[#fff] text-[22px] font-medium mt-4">
-              We help global brands design and build superior website, enabling
+              We help global brands design and build superior website, enabling 
               seamless user experiences across all modern platforms and devices
             </h5>
-            <div className="mt-16 nav-btn w-full">
+            <div className="mt-16 nav-btn w-full hidden md:block">
               <Button
                 px={4}
                 py={8}
@@ -70,23 +61,34 @@ const WebDevelopment = () => {
           </div>
         </section>
         <section className={`pt-20 px-[50px] min-h-[200px] container mx-auto `}>
-          <div className="text-center">
-            <p className="font-[14px]">
+          <div className="text-center w-full">
+            <p className="text-[14px] hidden lg:block">
               Web development services help create all types of web-based
               software and ensure great <br /> experience for web users. Here at
               Infinanze, we professionally design, redesign and continuously{" "}
               <br /> support customer-facing and enterprise web apps to achieve
               high conversion and adoption rates
             </p>
+            <p className="text-[14px] block lg:hidden">
+              Web development services help create all types of web-based
+              software and ensure great experience for web users. Here at
+              Infinanze, we professionally design, redesign and continuously{" "}
+               support customer-facing and enterprise web apps to achieve
+              high conversion and adoption rates
+            </p>
           </div>
         </section>
         <section className={` px-[50px] min-h-[500px] container mx-auto mt-10`}>
           <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center">
               Web Solution We Create
             </h1>
             <div className="max-w-[1170px] m-auto mt-10">
-              <SimpleGrid cols={3} spacing="xl">
+              <SimpleGrid cols={3}  breakpoints={[
+        { maxWidth: 980, cols: 2, spacing: 'md' },
+        { maxWidth: 755, cols: 2, spacing: 'sm' },
+        { maxWidth: 600, cols: 1, spacing: 'sm' },
+      ]} spacing="xl">
                 {solutions2?.map((item, i) => (
                   <div key={i}>
                     <CustomCard data={item} />
@@ -97,7 +99,7 @@ const WebDevelopment = () => {
           </div>
         </section>
 
-        <section className={` py-[50px] min-h-[780px] relative`}>
+        <section className={`py-[50px] min-h-[780px] relative`}>
           <div className="absolute top-[80px] left-0 z-10">
             <Image
               className="z-10"
@@ -108,12 +110,12 @@ const WebDevelopment = () => {
             />
           </div>
           <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] px-6 md:px-0 font-bold text-center">
               Full-Scale Web Development by Infinanze
             </h1>
           </div>
-          <div className="max-w-[1170px] m-auto mt-10">
-            <div className="grid grid-cols-3  gap-8">
+          <div className="max-w-[1170px] m-auto mt-10 px-6 lg:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  gap-8">
               {fullScaleData?.map((item, i) => (
                 <div
                   key={i}
@@ -146,18 +148,27 @@ const WebDevelopment = () => {
             />
           </div>
           <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center ">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center hidden lg:block">
               Partner With Infinanze For Your <br /> Web Development project
             </h1>
-            <p className="my-4 text-center">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center block lg:hidden">
+              Partner With Infinanze For Your Web Development project
+            </h1>
+            <p className="my-4 text-center hidden lg:block">
               We can staff a full team for a custom web development project with
               our 100+ people on board, <br /> or we can provide experts with
               the knowledge and abilities your current personnel lack. <br />{" "}
               The group roles we discuss
             </p>
+            <p className="my-4 text-center block lg:hidden">
+              We can staff a full team for a custom web development project with
+              our 100+ people on board, or we can provide experts with
+              the knowledge and abilities your current personnel lack.
+              The group roles we discuss
+            </p>
           </div>
           <div className="my-20 max-w-[1170px] m-auto">
-            <div className="grid grid-cols-6  gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6  gap-4">
               {developers?.map((item, i) => (
                 <div
                   key={i}
@@ -182,12 +193,12 @@ const WebDevelopment = () => {
             />
           </div>
           <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center ">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center ">
               Our Pricing Method
             </h1>
           </div>
           <div className="my-20 max-w-[1170px] m-auto">
-            <div className="grid grid-cols-3  gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
               {pricing?.map((item, i) => (
                 <div
                   key={i}
@@ -205,20 +216,26 @@ const WebDevelopment = () => {
           </div>
         </section>
 
-        <section className="min-h-[600px] mx-auto px-[260px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
+        <section className=" min-h-full px-10 py-10 md:min-h-[600px] mx-auto md:px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
           <ExpertSection />
         </section>
         <section
           className={`px-[50px] py-[70px] min-h-[700px] container mx-auto relative`}
         >
           <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center capital">
+            <h1 className="text-[#000] text-[25px] md:text-[30px] font-bold text-center capital">
               Emerging Tech To Drive More Value <br /> Along Your Digital
               Journey
             </h1>
-            <p className="my-4 text-center">
+            <p className="my-4 text-center hidden lg:block">
               We always keeps track of emerging technologies to deliver
               forward-thinking solutions. From the highest <br /> level of
+              security with blockchain to reliable automation with AI/ML — use
+              every benefit for your solution
+            </p>
+            <p className="my-4 text-center block lg:hidden">
+              We always keeps track of emerging technologies to deliver
+              forward-thinking solutions. From the highest level of
               security with blockchain to reliable automation with AI/ML — use
               every benefit for your solution
             </p>

@@ -24,23 +24,23 @@ const MobileDevelopment = () => {
     <>
       <PageTitle title="Infinanze | Mobile App Development" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
-        <section className="w-full max-h-[900px] relative">
+        <section className="w-full max-h-[900px] relative  hero-section">
           <Header />
           <Image
-            className="w-screen h-[900px] bg-cover bg-center"
+            className="w-screen h-[900px] bg-cover bg-center banner"
             width={900}
             height={900}
             src={assetIndex.Image.banner4}
             alt="banner"
           />
-          <div className="absolute top-[45%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center">
+          <div className="absolute top-[50%] md:top-[45%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-20 text-center w-full md:w-[700px] px-6">
             <h1 className="text-[#fff] text-[60px] font-bold leading-tight">
             Mobile App Development
             </h1>
             <h5 className="text-[#fff] text-[22px] font-medium mt-4">
             We help global brands design and build superior digital products, enabling seamless user experiences across all modern platforms and devices
             </h5>
-            <div className="mt-16 nav-btn w-full">
+            <div className=" mt-6 md:mt-16 nav-btn w-full avatars">
             <AvatarComponent />
             </div>
           </div>
@@ -55,12 +55,12 @@ const MobileDevelopment = () => {
             </div>
         </section>
         <section className={` px-[50px] min-h-[600px] container mx-auto mt-10`}>
-          <div  className="flex items-center justify-between space-x-8 max-w-[1000px] m-auto">
-            <div>
+          <div  className="flex items-center flex-col lg:flex-row justify-between space-x-8 max-w-[1000px] m-auto">
+            <div className="ui my-6 md:my-0">
               <Mobile />
             </div>
             <div>
-            <h1 className="text-[30px] font-bold mb-4 text-[#121212B2]" >Benefits</h1>
+            <h1 className="text-[25px] md:text-[30px] font-bold mb-4 text-[#121212B2]" >Benefits</h1>
                  <List spacing="sm" size="sm" center>
                 <List.Item
                   icon={
@@ -180,14 +180,18 @@ const MobileDevelopment = () => {
             <Image className="z-10" src={assetIndex.Image.pattern} alt="" width={450} height={500}/>
           </div>
           <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center">
+            <h1 className="text-[#000] text-[20px] md:text-[30px] font-bold text-center">
             Mobile Application Development Services For <br /> various Platforms
             </h1>
             <p className="my-4 text-center">Our mobile app developers have over a decade-long expertise in building <br /> solutions that meet market needs, empower companies’ brand identity, and <br /> encourage business growth and expansion</p>
           </div>
-          <div className="min-h-[400px] bg-[#1974FB57] mx-auto px-[180px] z-10 mt-16 pt-16 pb-6 relative grid grid-cols-2 gap-4  process">
+          <div className="min-h-[400px] bg-[#1974FB57] mx-auto px-6 md:px-[180px] z-10 mt-16 pt-16 pb-6 relative grid grid-cols-1 md:grid-cols-2 gap-4  process">
           <div>
-            <SimpleGrid cols={2} spacing="lg">
+            <SimpleGrid cols={2} breakpoints={[
+        { maxWidth: 980, cols: 2, spacing: 'md' },
+        { maxWidth: 755, cols: 2, spacing: 'sm' },
+        { maxWidth: 600, cols: 1, spacing: 'sm' },
+      ]} spacing="lg">
                <div>
                 <div className="-ml-[18px]">
                 <Learning />
@@ -243,31 +247,31 @@ const MobileDevelopment = () => {
           </div>
         </section>
 
-        <section className={`px-[50px] pb-[70px] min-h-[700px] container mx-auto relative`}>
+        <section className={`md:px-[50px] pb-[70px] min-h-[700px] container mx-auto relative w-full`}>
         <div>
-            <h1 className="text-[#000] text-[30px] font-bold text-center capital">
+            <h1 className="text-[#000] text-[20px] md:text-[30px] font-bold text-center capital">
             Emerging Tech To Drive More Value <br /> Along Your Digital Journey
             </h1>
             <p className="my-4 text-center">We always keeps track of emerging technologies to deliver forward-thinking solutions. From the highest <br /> level of security with blockchain to reliable automation with AI/ML — use every benefit for your solution</p>
           </div>
-          <div className="max-w-[1000px] m-auto py-12">
+          <div className="md:max-w-[1000px]  m-auto py-12">
             <TechContent />
           </div>
         </section>
-        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
+        <section className=" min-h-full px-10 py-10 md:min-h-[600px] mx-auto md:px-[180px] relative bg-[url('/assets/svg/banner.svg')] bg-no-repeat bg-cover bg-center flex items-center">
           <ExpertSection />
         </section>
-        <section className="min-h-[600px] mx-auto px-[180px] relative bg-[#F5F5F5] py-16">
-        <div>
-              <h1 className="text-[#000] text-[28px] font-bold text-center">
+        <section className="min-h-[600px] mx-auto px-6 md:px-[180px] relative bg-[#F5F5F5] py-10">
+          <div>
+            <h1 className="text-[#000] text-[28px] font-bold text-center">
               Our Frequently asked Questions
-              </h1>
-            </div>
-            
-            <div className=" my-12">
+            </h1>
+          </div>
+
+          <div className=" my-12">
             <AccordionContent />
           </div>
-        </section> 
+        </section>
       </main>
       <Footer />
     </>
