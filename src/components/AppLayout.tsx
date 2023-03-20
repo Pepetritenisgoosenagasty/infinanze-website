@@ -5,8 +5,8 @@ const AppLayout = ({ children }: { children: any }) => {
   return (
     <div id="outer-container">
       <MobileNav
-        pageWrapId={"page-wrap"}
-        outerContainerId={"outer-container"}
+        pageWrapId="page-wrap"
+        outerContainerId="outer-container"
       />
       <main id="page-wrap">{children}</main>
     </div>
