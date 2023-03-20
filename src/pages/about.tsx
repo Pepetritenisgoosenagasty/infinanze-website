@@ -13,6 +13,7 @@ import { assetIndex } from "public/assets";
 import { Raleway } from '@next/font/google';
 import React from "react";
 import { useMediaQuery } from "@mantine/hooks";
+import AppLayout from "@/components/AppLayout";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ const About = () => {
   const largeScreen = useMediaQuery('(min-width: 900px)');
   return (
     <>
+    <AppLayout>
       <PageTitle title="Infinanze | About" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
         <section className="w-full max-h-[900px] relative hero-section">
@@ -191,6 +193,7 @@ const About = () => {
         </section>
       </main>
       <Footer />
+      </AppLayout>
     </>
   );
 };

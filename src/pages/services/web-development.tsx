@@ -1,3 +1,4 @@
+import AppLayout from "@/components/AppLayout";
 import CustomCard from "@/components/CustomCard";
 import ExpertSection from "@/components/ExpertSection";
 import Footer from "@/components/Footer";
@@ -19,6 +20,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 const WebDevelopment = () => {
   return (
     <>
+    <AppLayout>
       <PageTitle title="Infinanze | Web Development" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
         <section className="w-full max-h-[900px] relative hero-section">
@@ -246,6 +248,7 @@ const WebDevelopment = () => {
         </section>
       </main>
       <Footer />
+      </AppLayout>
     </>
   );
 };

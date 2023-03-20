@@ -214,6 +214,24 @@ borderRadius: '5px'
       }
     },
 
+    ".bm-item-list": {
+      display: "flex",
+
+      ".bm-item": {
+        display: "flex !important",
+        flexDirection: "column",
+
+        ".menu-item": {
+          padding: 20,
+          fontSize: 25,
+
+          'svg': {
+            marginLeft: 20,
+          }
+        }
+      }
+    },
+
       // Media query with value from theme
       [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
 

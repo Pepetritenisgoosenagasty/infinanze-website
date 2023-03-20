@@ -1,4 +1,5 @@
 import { AccordionContent } from "@/components/AccordionContent";
+import AppLayout from "@/components/AppLayout";
 import { AvatarComponent } from "@/components/AvatarComponent";
 import ConsultCarousel from "@/components/ConsultCarousel";
 import ExpertSection from "@/components/ExpertSection";
@@ -23,6 +24,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 const UxDesign = () => {
   return (
     <>
+    <AppLayout>
       <PageTitle title="Infinanze | ui/ux Design" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
         <section className="w-full max-h-[900px] relative hero-section">
@@ -288,6 +290,7 @@ const UxDesign = () => {
         </section>
       </main>
       <Footer />
+      </AppLayout>
     </>
   );
 };

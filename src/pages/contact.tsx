@@ -15,6 +15,7 @@ import React from "react";
 import { AccordionContent } from "@/components/AccordionContent";
 import ContactForm from "@/components/Forms/ContactForm";
 import { useMediaQuery } from "@mantine/hooks";
+import AppLayout from "@/components/AppLayout";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ const Contact = () => {
   const largeScreen = useMediaQuery('(min-width: 900px)');
   return (
     <>
+    <AppLayout>
       <PageTitle title="Infinanze | Contact" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
         <section className="w-full md:max-h-[900px] relative hero-section">
@@ -85,6 +87,7 @@ const Contact = () => {
         </section>
       </main>
       <Footer />
+      </AppLayout>
     </>
   );
 };

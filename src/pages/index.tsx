@@ -39,6 +39,7 @@ import ExpertsCard from "@/components/ExpertsCard";
 import GradientBg from "@/components/Svg/GradientBg";
 import ExpertSection from "@/components/ExpertSection";
 import { useMediaQuery } from "@mantine/hooks";
+import AppLayout from "@/components/AppLayout";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -93,8 +94,9 @@ export default function Home() {
 
   return (
     <>
+    <AppLayout>
       <PageTitle title="Infinanze | Home" />
-      <main className={`min-h-full ${raleway.className}`}>
+      <div className={`min-h-full ${raleway.className}`}>
         <section className="w-full max-h-500px md:max-h-[900px] relative home">
           <Header />
           <Carousel
@@ -341,8 +343,9 @@ export default function Home() {
             <AccordionContent />
           </div>
         </section>
-      </main>
+      </div>
       <Footer />
+      </AppLayout>
     </>
   );
 }

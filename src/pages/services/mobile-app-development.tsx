@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { AccordionContent } from "@/components/AccordionContent";
+import AppLayout from "@/components/AppLayout";
 import ApproachContent from "@/components/ApproachContent";
 import { AvatarComponent } from "@/components/AvatarComponent";
 import ExpertSection from "@/components/ExpertSection";
@@ -22,6 +23,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 const MobileDevelopment = () => {
   return (
     <>
+    <AppLayout>
       <PageTitle title="Infinanze | Mobile App Development" />
       <main className={`min-h-full z-10 ${raleway.className}`}>
         <section className="w-full max-h-[900px] relative  hero-section">
@@ -254,7 +256,7 @@ const MobileDevelopment = () => {
             </h1>
             <p className="my-4 text-center">We always keeps track of emerging technologies to deliver forward-thinking solutions. From the highest <br /> level of security with blockchain to reliable automation with AI/ML — use every benefit for your solution</p>
           </div>
-          <div className="md:max-w-[1000px]  m-auto py-12">
+          <div className="max-w-[1000px] m-auto py-12">
             <TechContent />
           </div>
         </section>
@@ -274,6 +276,7 @@ const MobileDevelopment = () => {
         </section>
       </main>
       <Footer />
+      </AppLayout>
     </>
   );
 };
