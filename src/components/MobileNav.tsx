@@ -8,13 +8,13 @@ import ListComponent from './ListComponent'
 import { ListMobileComponent, TechMobileComponent } from './MobileListContent'
 import { styles } from './MobileStyle'
 
-const MobileNav = () => {
+const MobileNav = ({pageWrapId, outerContainerId}: any) => {
     const [content, setContent] = useState(false)
     const [tech, setTech] = useState(false)
     const [opened, { toggle }] = useDisclosure(false);
   return (
     <div>
-        <Menu right styles={styles}>
+        <Menu right styles={styles} pageWrapId={pageWrapId} outerContainerId={outerContainerId}>
         <div className='m-auto flex flex-col'>
         <Link id="home" className="menu-item" href="/">Home</Link>
         <Link id="about" className="menu-item" href="/about">About</Link>
