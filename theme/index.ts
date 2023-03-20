@@ -232,8 +232,16 @@ borderRadius: '5px'
       }
     },
 
+    '.bm-burger-button': {
+      display: 'none'
+    },
+
       // Media query with value from theme
       [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+
+        '.bm-burger-button': {
+          display: 'block'
+        },
 
         '.header': {
           width: '100%',
@@ -376,6 +384,9 @@ borderRadius: '5px'
 
       },
       [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+        '.bm-burger-button': {
+          display: 'block'
+        },
         '.header': {
           width: '100%',
           '.sub-header': {
