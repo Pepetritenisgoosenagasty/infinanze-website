@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
-  const { name, email, message, phoneNumber, companyName } = req.body;
+  const { email } = req.body;
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -15,14 +15,11 @@ export default async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: `${email}`,
+      from: email,
       to: "support@infinanze.com",
-      subject: `Contact form submission from ${name}`,
-      html: `<p>You have a contact form submission</p>
-        <p><strong>Company name: </strong> ${companyName}</p>
-        <p><strong>Phone Number: </strong> ${phoneNumber}</p>
+      subject: `Newsletter Subscription from ${email}`,
+      html: `<p>Newsletter Subscription</p>
         <p><strong>Company Email: </strong> ${email}</p>
-        <p><strong>Message: </strong> ${message}</p>
       `
     });
   } catch (error) {

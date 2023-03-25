@@ -19,14 +19,20 @@ const ContactForm = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name, email, message, companyName, phoneNumber }),
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+            companyName,
+            phoneNumber,
+          }),
         });
 
         setIsLoading(false);
         alert("Message sent successfully");
         setName("");
-        setCompanyName("")
-        setPhoneNumber("")
+        setCompanyName("");
+        setPhoneNumber("");
         setEmail("");
         setMessage("");
       } catch (error) {
@@ -51,22 +57,43 @@ const ContactForm = () => {
             ]}
           >
             <div>
-              <TextInput placeholder="Full name" label=""  value={name} required
-                onChange={(e) => setName(e.target.value)}/>
+              <TextInput
+                placeholder="Full name"
+                label=""
+                value={name}
+                required
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
             <div>
-              <TextInput placeholder="Company Name" label=""  value={companyName} required
-                onChange={(e) => setCompanyName(e.target.value)}/>
+              <TextInput
+                placeholder="Company Name"
+                label=""
+                value={companyName}
+                required
+                onChange={(e) => setCompanyName(e.target.value)}
+              />
             </div>
             <div>
               {" "}
-              <TextInput type="number" placeholder="Your work number" label=""  value={phoneNumber} required
-                onChange={(e) => setPhoneNumber(e.target.value)}/>
+              <TextInput
+                type="number"
+                placeholder="Your work number"
+                label=""
+                value={phoneNumber}
+                required
+                onChange={(e) => setPhoneNumber(e.target.value)}
+              />
             </div>
             <div>
               {" "}
-              <TextInput placeholder="Your work Email" label=""  value={email} required
-                onChange={(e) => setEmail(e.target.value)}/>
+              <TextInput
+                placeholder="Your work Email"
+                label=""
+                value={email}
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </SimpleGrid>
           <div className="my-6 space-y-6 ">
@@ -74,8 +101,14 @@ const ContactForm = () => {
               Tell us all about your company, your project and we will get right
               back to you!
             </p>
-            <Textarea placeholder="Your comment" label="" minRows={6}  value={message}
-                onChange={(e) => setMessage(e.target.value)}/>
+            <Textarea
+              placeholder="Your comment"
+              label=""
+              minRows={6}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
           </div>
           <div>
             <div className="text-right absolute bottom-4 md:bottom-10 right-6">
