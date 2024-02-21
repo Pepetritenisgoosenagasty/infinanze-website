@@ -12,9 +12,10 @@ const ContactForm = () => {
   const onSubmitForm = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsLoading(true);
-    if (name && email && message) {
+    console.log(name, companyName, email, message, phoneNumber)
+    if (name   && email && message) {
       try {
-        const res = await fetch(`/api/contact`, {
+         await fetch(`/api/contact`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
